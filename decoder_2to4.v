@@ -1,6 +1,7 @@
 /*
 
-decoder_2to4.v converts a 2-bit address into a ont-hot write enable. In practice, this is the module that maps the addresses into the actual registers they point to.
+decoder_2to4.v converts a 2-bit address into a ont-hot write enable. *It uses addr to enable exactly one register for writing.*
+
 
 PORTS are:
     1. input: en, addr
