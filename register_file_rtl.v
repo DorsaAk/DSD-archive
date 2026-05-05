@@ -77,14 +77,14 @@ module register_file_rtl
 
     // ------------------------- Combinational Read -------------------------
 
-    // 1. Select the addressed register's contente
-    wire [3:0] read_data;
-    assign read_data = ($isunknown(addr)) ? 4'bxxxx     // x propagation in case of invalid address
-                                         : regs[addr];  // normal read
+    // 1. Read logic with X propagation for invalid addresses
+    wire invalid_addr = (addr !== 2'b00 && addr !== 2'b01 && addr !== 2'b10 && addr !== 2'b11);
+a   ssign read_data = (invalid_addr) ? 4'bxxxx     // x propagation in case of invalid address
+                                   : regs[addr]; // normal read
 
     // 2. Tri-state control: drive bus only when rd_wr = 1
     assign data = (rd_wr) ? read_data       // read: drive the bus
-                           : 4'bzzzz;       // write: high-impedance
+                       : 4'bzzzz;       // write: high-impedance
 
     //---------------------------------------------------------------------------
     
