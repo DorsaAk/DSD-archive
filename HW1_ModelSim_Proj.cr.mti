@@ -1,23 +1,16 @@
-D:/University/Term6/FPGA/HW/HW1/reg_4bit.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW1/reg_4bit.v
-Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
--- Compiling module reg_4bit
-
-Top level modules:
-	reg_4bit
-
-} {} {}} D:/University/Term6/FPGA/HW/HW1/mux4_4bit.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW1/mux4_4bit.v
+D:/University/Term6/FPGA/HW/HW1/mux4_4bit.v {1 {vlog -work work -vopt -stats=none {D:\University\Term6\FPGA\HW\HW1\mux4_4bit.v}
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
 -- Compiling module mux4_4bit
 
 Top level modules:
 	mux4_4bit
 
-} {} {}} D:/University/Term6/FPGA/HW/HW1/tri_buf_4bit.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW1/tri_buf_4bit.v
+} {} {}} D:/University/Term6/FPGA/HW/HW1/reg_4bit.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW1/reg_4bit.v
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
--- Compiling module tri_buf_4bit
+-- Compiling module reg_4bit
 
 Top level modules:
-	tri_buf_4bit
+	reg_4bit
 
 } {} {}} D:/University/Term6/FPGA/HW/HW1/tb_register_file.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW1/tb_register_file.v
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
@@ -32,6 +25,13 @@ Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
 
 Top level modules:
 	register_file_rtl
+
+} {} {}} D:/University/Term6/FPGA/HW/HW1/tri_buf_4bit.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW1/tri_buf_4bit.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module tri_buf_4bit
+
+Top level modules:
+	tri_buf_4bit
 
 } {} {}} D:/University/Term6/FPGA/HW/HW1/decoder_2to4.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW1/decoder_2to4.v
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
