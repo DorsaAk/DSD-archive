@@ -43,10 +43,16 @@ module reg_4bit
         end
 
         else if (en) begin
-            q <= d; // latch data when enabled
+            q <= d; // transfer data to q when enabled
         end
 
-        //else?
+        // else?
+        //      We don't need an else statement here. Since when there is no 'else' Verilog automatically latches the data and this is 
+        //      exactly our desired behavior, as we want q to keep its current value.
+        // However, we could write:
+        // end else begin
+        //      q <= q;
+        // end
 
     end
 
