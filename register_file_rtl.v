@@ -17,11 +17,11 @@ PARAMETER:
     
 SPECS are:
     WRITE:
-        When rd_wrn = 0 and posedge clk, the addressed register captures whatever is on data. This replaces the decoder + individual register enables.
+        When rd_wr = 0 and posedge clk, the addressed register captures whatever is on data. This replaces the decoder + individual register enables.
     READ:
         read_data is a combinational select: regs[addr]. If addr has any x/z bit, $isunknown forces read_data = 4'bxxxx.
     TRI STATE:
-        The continuous assignment assign data = (rd_wrn) ? read_data : 4'bzzzz; exactly replaces the tri_buf_4bit instance. When rd_wrn = 0, data = Z — the testbench drives the bus.
+        The continuous assignment assign data = (rd_wr) ? read_data : 4'bzzzz; exactly replaces the tri_buf_4bit instance. When rd_wr = 0, data = Z — the testbench drives the bus.
 
 X/Z BEHAVIOR:
     1. If the address is invalid (contains x or z):
@@ -48,13 +48,51 @@ module register_file_rtl
 );
 
     // ------------------------- Register File Storage -------------------------
+
     reg [3:0] regs [0:3];  // 4-bit register: regs[0] to regs[3]
 
+    // ---------------------------------------------------------------------------
+
+
     // ------------------------- Synchronous Write -------------------------
+    
+    integer i; // used for clearing in case of a reset
+    always @(posedge clk or negedge rst_n) begin  // asynch. reset
+        if (!rst_n) begin
+            // clear all the registers on reset
+            for (i = 0; i < 4; i = i + 1) begin
+                regs[i] <= 4'b0000;  // non-blocking assignment for a sequential always block
+            end
+        end
+        else if (!rd_wr) begin  // rd_wr = 0 means that we have a write operation
+            regs[addr] <= data; // captures the data bus into the addresses register
+        end
+        //
+        // If rd_wr = 1 (read), nothing happens and registers hold their values, so we don't need to write any separate else statement...
+        //
+    end
+
+    // ---------------------------------------------------------------------------
 
 
     // ------------------------- Combinational Read -------------------------
 
+    // 1. Select the addressed register's contente
+    wire [3:0] read_data;
+    assign read_data = ($isunknown(addr)) ? 4'bxxxx     // x propagation in case of invalid address
+                                         : regs[addr];  // normal read
+
+    // 2. Tri-state control: drive bus only when rd_wr = 1
+    assign data = (rd_wr) ? read_data       // read: drive the bus
+                           : 4'bzzzz;       // write: high-impedance
+
+    //---------------------------------------------------------------------------
     
 
 endmodule
+
+
+// THOUGHTS:
+//      Here, we only intend to simulate and synthesize, not physically implement. I GUESS if we were to implement
+//      physically as well, the for loop (in reset) was not a good choice and it was much better to write four separate 
+//      assignments, as it is less costly in terms of hardware.
