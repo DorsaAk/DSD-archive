@@ -22,8 +22,20 @@ SPECS are:
         Register output -> MUX input -> MUX gives output based on sel (= the 2-bit address) -> tri-state buffer -> data bus
 
 X/Z BEHAVIOR:
-    1. 
+    1. If the address is invalid (contains x or z):
+        1.1. decoder has y=4'bxxxx, because of casez (or $isunknown)
+        1.2. MUX has y = 4'bxxxx, for the same reason as 1.1
+        1.3. data bus has 4'bxxxx, as the tri-state buffer passes x through
+    
+    2. If a write operation is in process:
+        2.1. The data bus gets 4'bzzzz from the regfile side, as the tri-state buffer/continuous assignment is disabled and the register file releases the bus. 
 
+    THUS:
+        1. Any unknown on the address lines propagates 4'bxxxx to the data bus during a read.
+        2. The register file never drives the bus during a write. The bus is Hi‑Z from the design under test’s perspective,
+        and the testbench is responsible for placing data there. If the testbench also releases the bus during a write, data
+        floats at 4'bzzzz and the targeted register captures Z — which is correct but not useful for testing.
+        3. Also, during a reset, the storage is cleaned to zero and the bus is not driven. The testbench also, must not drive data during reset.
 */
 
 
