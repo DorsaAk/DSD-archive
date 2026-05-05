@@ -94,16 +94,17 @@ module tb_register_file;
 
     // ======================== PART 4: TASKS ========================
     // ==== TASK 1: Reset both DUTs ====
-    task reset_duts:
+    task reset_duts;
         begin
             $display("[%0t] --- RESET ---", $time);
             rst_n     = 1'b0;
-            rd_wrn    = 1'b0;
+            rd_wr    = 1'b0;
             addr      = 2'b00;
             tb_drv_s  = 1'b0;
             tb_drv_r  = 1'b0;
             #(CLK_PERIOD);
             rst_n     = 1'b1;
+            rd_wr = 1'b1;
             #(CLK_PERIOD);
         end
     endtask
@@ -115,7 +116,7 @@ module tb_register_file;
         begin
             @(negedge clk);
             addr      = a;
-            rd_wrn    = 1'b0; // write mode
+            rd_wr    = 1'b0; // write mode
             tb_drv_s  = 1'b1;
             tb_dout_s = val;
             tb_drv_r  = 1'b1;
@@ -124,7 +125,7 @@ module tb_register_file;
             #1;
             tb_drv_s  = 1'b0; // release both buses
             tb_drv_r  = 1'b0;
-            rd_wrn    = 1'b1;
+            rd_wr    = 1'b1;
             $display("[%0t] WRITE addr=%b data=%b", $time, a, val);
         end
     endtask
@@ -137,7 +138,7 @@ module tb_register_file;
         begin
             test_count = test_count + 1;
             addr     = a;
-            rd_wrn   = 1'b1; // read mode
+            rd_wr   = 1'b1; // read mode
             tb_drv_s = 1'b0; // TB releases buses — DUTs drive
             tb_drv_r = 1'b0;
             #5;
@@ -161,7 +162,7 @@ module tb_register_file;
                 fail_count = fail_count + 1;
             end
 
-            rd_wrn = 1'b0;
+            rd_wr = 1'b0;
         end
     endtask
 
@@ -172,7 +173,7 @@ module tb_register_file;
         begin
             test_count = test_count + 1;
             addr     = a;
-            rd_wrn   = 1'b1;
+            rd_wr   = 1'b1;
             tb_drv_s = 1'b0;
             tb_drv_r = 1'b0;
             #5;
@@ -207,7 +208,7 @@ module tb_register_file;
                 fail_count = fail_count + 1;
             end
 
-            rd_wrn = 1'b0;
+            rd_wr = 1'b0;
         end
     endtask
 
@@ -218,7 +219,7 @@ module tb_register_file;
         begin
             test_count = test_count + 1;
             addr     = a;
-            rd_wrn   = 1'b0;            // write mode
+            rd_wr   = 1'b0;            // write mode
             tb_drv_s = 1'b0;            // TB not driving
             tb_drv_r = 1'b0;
             #5;
@@ -254,9 +255,14 @@ module tb_register_file;
         $display(" REGISTER FILE TESTBENCH — Structural vs. RTL");
         $display("============================================================");
 
+        // VCD dump
+        $dumpfile("register_file_dump.vcd");  // name of the output VCD file
+        $dumpvars(0, tb_register_file);       // dump ALL signals in the testbench
+        $dumpon; 
+
         // --- Power‑on defaults ---
         rst_n     = 1'b0;
-        rd_wrn    = 1'b0;
+        rd_wr    = 1'b0;
         addr      = 2'b00;
         tb_dout_s = 4'b0000;
         tb_dout_r = 4'b0000;
@@ -270,6 +276,7 @@ module tb_register_file;
         read_and_check(2'b01, 4'b0000);
         read_and_check(2'b10, 4'b0000);
         read_and_check(2'b11, 4'b0000);
+        #1;
 
         // --- Phase 2: Write unique values ---
         write_both(2'b00, 4'b1010);
@@ -355,7 +362,7 @@ module tb_register_file;
             $display(" SOME TESTS FAILED — review log above");
         $display("============================================================");
 
-        $finish;
+        // $finish;
     end
 
     // ======================== END OF PART 5 ========================
