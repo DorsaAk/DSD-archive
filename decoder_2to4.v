@@ -8,7 +8,7 @@ PORTS are:
     2. output: y
 
 PARAMETER:
-    WIDTH
+    none needed
     
 SPECS are:
     1. When en = 1: exactly one output is high (one af the bits in y, the one that corresponds to thyat address)
@@ -21,13 +21,10 @@ X/Z BEHAVIOR:
 
 
 module decoder_2to_4
-#(
-    parameter WIDTH = 4;
-)
 (
     input wire en,
-    input wire [($clog2(WIDTH) - 1) : 0] addr,
-    output reg [(WIDTH - 1) : 0] y
+    input wire [1 : 0] addr,
+    output reg [3 : 0] y
 );
 
     always @(*) begin
