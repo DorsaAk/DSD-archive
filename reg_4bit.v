@@ -25,7 +25,7 @@ X/Z BEHAVIOR:
 
 module reg_4bit
 #(
-    parameter WIDTH = 4;
+    parameter WIDTH = 4
 )
 (
     input wire clk,

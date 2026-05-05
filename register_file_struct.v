@@ -28,7 +28,8 @@ X/Z BEHAVIOR:
         1.3. data bus has 4'bxxxx, as the tri-state buffer passes x through
     
     2. If a write operation is in process:
-        2.1. The data bus gets 4'bzzzz from the regfile side, as the tri-state buffer/continuous assignment is disabled and the register file releases the bus. 
+        2.1. The data bus gets 4'bzzzz from the regfile side, as the tri-state buffer/continuous assignment is disabled and 
+        the register file releases the bus. 
 
     THUS:
         1. Any unknown on the address lines propagates 4'bxxxx to the data bus during a read.

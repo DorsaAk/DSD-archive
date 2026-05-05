@@ -21,7 +21,7 @@ X/Z BEHAVIOR:
 
 module tri_buf_4bit
 #(
-    parameter WIDTH = 4;
+    parameter WIDTH = 4
 )
 (
     input wire [WIDTH-1:0] in,
