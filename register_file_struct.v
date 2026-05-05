@@ -58,7 +58,7 @@ module register_file_struct
     wire [3:0] reg2_q;
     wire [3:0] reg3_q;
     //
-    wire mux_out; // This is the output of the MUX whiich is given as input to the tri-state
+    wire [3:0] mux_out; // This is the output of the MUX whiich is given as input to the tri-state
 
 
     // ------------------------- Control Logic -------------------------

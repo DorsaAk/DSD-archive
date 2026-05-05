@@ -1,0 +1,181 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/University/Term4/CA and Microprocessor Systems/LAB/LAB08 - Multi Cycle/ModelSim File3
+T_opt
+!s110 1778017989
+V_;2z@0eA6A;4Alk[2US1z1
+04 16 4 work tb_register_file fast 0
+=1-cc28aa8ba675-69fa66c4-110-6564
+o-quiet -auto_acc_if_foreign -work work
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vdecoder_2to4
+Z1 !s110 1778017764
+!i10b 1
+!s100 J4MI@B]`baaZXX^iSfHZ83
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IAWcoKTK5M[cfFA;J@5jZM3
+Z3 dD:/University/Term6/FPGA/HW/HW1
+w1778004024
+8D:/University/Term6/FPGA/HW/HW1/decoder_2to4.v
+FD:/University/Term6/FPGA/HW/HW1/decoder_2to4.v
+!i122 8
+L0 23 22
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z6 !s108 1778017764.000000
+!s107 D:/University/Term6/FPGA/HW/HW1/decoder_2to4.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW1/decoder_2to4.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vmux4_4bit
+R1
+!i10b 1
+!s100 [D=kAO:9kNdFMdIzMd;]f1
+R2
+ID2CjK;V>dX[ZN>iPZINUm3
+R3
+w1778002369
+8D:/University/Term6/FPGA/HW/HW1/mux4_4bit.v
+FD:/University/Term6/FPGA/HW/HW1/mux4_4bit.v
+!i122 9
+L0 21 23
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/University/Term6/FPGA/HW/HW1/mux4_4bit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW1/mux4_4bit.v|
+!i113 0
+R7
+R0
+vreg_4bit
+R1
+!i10b 1
+!s100 :iMX3D^1[Z201;mU<D=D;1
+R2
+I0JS6Hg9SSI`2Az[o?Afij0
+R3
+w1778017701
+8D:/University/Term6/FPGA/HW/HW1/reg_4bit.v
+FD:/University/Term6/FPGA/HW/HW1/reg_4bit.v
+!i122 10
+L0 26 35
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/University/Term6/FPGA/HW/HW1/reg_4bit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW1/reg_4bit.v|
+!i113 0
+R7
+R0
+vregister_file_rtl
+R1
+!i10b 1
+!s100 o5^z8=?BMbXfND576i_gV1
+R2
+II?KRidk<j@ROchaNGQbzZ1
+R3
+w1778008516
+8D:/University/Term6/FPGA/HW/HW1/register_file_rtl.v
+FD:/University/Term6/FPGA/HW/HW1/register_file_rtl.v
+!i122 11
+L0 41 52
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/University/Term6/FPGA/HW/HW1/register_file_rtl.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW1/register_file_rtl.v|
+!i113 0
+R7
+R0
+vregister_file_struct
+R1
+!i10b 1
+!s100 Re[lgjG:h63VJcUgmnW[70
+R2
+IGS0zO9[SRbE_9`<HD=?552
+R3
+w1778007640
+8D:/University/Term6/FPGA/HW/HW1/register_file_struct.v
+FD:/University/Term6/FPGA/HW/HW1/register_file_struct.v
+!i122 12
+L0 42 86
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/University/Term6/FPGA/HW/HW1/register_file_struct.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW1/register_file_struct.v|
+!i113 0
+R7
+R0
+vtb_register_file
+R1
+!i10b 1
+!s100 a^BX]zIfoD2N=hk:CgMR12
+R2
+I8k`lRAl72>X;fY_La:E[G2
+R3
+w1778017751
+8D:/University/Term6/FPGA/HW/HW1/tb_register_file.v
+FD:/University/Term6/FPGA/HW/HW1/tb_register_file.v
+!i122 13
+L0 28 341
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/University/Term6/FPGA/HW/HW1/tb_register_file.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW1/tb_register_file.v|
+!i113 0
+R7
+R0
+vtri_buf_4bit
+R1
+!i10b 1
+!s100 8o`J>?5<5m6z>3KKW]z]32
+R2
+ICFF_UaBSeWFzdBXToT@Jc3
+R3
+w1778017687
+8D:/University/Term6/FPGA/HW/HW1/tri_buf_4bit.v
+FD:/University/Term6/FPGA/HW/HW1/tri_buf_4bit.v
+!i122 14
+L0 22 14
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/University/Term6/FPGA/HW/HW1/tri_buf_4bit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW1/tri_buf_4bit.v|
+!i113 0
+R7
+R0
