@@ -30,14 +30,17 @@ module mux4_4bit
     
     always @(*) begin
         // Again, this module is purely combinational, so we use always @(*). We could've used conditional assignments, but they would've gotten nested and messy.
-        casez(sel) // Reason for using CASEZ explained in comments, in decoder_2to4.v
-            2'b00:   y = d0;  // blocking assignments in a combinational always block
-            2'b01:   y = d1;
-            2'b10:   y = d2;
-            2'b11:   y = d3;
-            default: y = {WIDTH{1'bx}}; // the replication operator
-        endcase
-
+        if (sel !== 2'b00 && sel !== 2'b01 && sel !== 2'b10 && sel !== 2'b11) begin
+            y = 4'bxxxx;
+        end else begin
+            case(sel)
+                2'b00:   y = d0;  // blocking assignments in a combinational always block
+                2'b01:   y = d1;
+                2'b10:   y = d2;
+                2'b11:   y = d3;
+                default: y = {WIDTH{1'bx}}; // the replication operator
+            endcase
+        end
     end
 
 endmodule
