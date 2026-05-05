@@ -19,7 +19,7 @@ X/Z BEHAVIOR:
 
 */
 
-module tri_but_4bit
+module tri_buf_4bit
 #(
     parameter WIDTH = 4;
 )
