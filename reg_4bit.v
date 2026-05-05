@@ -39,7 +39,7 @@ module reg_4bit
     always @(posedge clk or negedge rst_n) begin // asynchronous reset
         
         if(!rst_n) begin // active-low reset
-            q <= {WIDTH{1'b0}}; // clear to zero on reset, non-blocking assignment in always block
+            q <= {WIDTH{1'b0}}; // clear to zero on reset, non-blocking assignment in a sequential always block
         end
 
         else if (en) begin
@@ -47,7 +47,7 @@ module reg_4bit
         end
 
         //else?
-        
+
     end
 
 
