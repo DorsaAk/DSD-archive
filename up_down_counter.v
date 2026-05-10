@@ -27,8 +27,50 @@ module up_down_counter(
     output reg [3:0] count  // current counter value
 );
 
-    always @(posedge clkj or negedge rst_n) begin  // explicit sensitivity list, sequential always block, asynch. reset
-        
+    always @(posedge clk or negedge rst_n) begin  // explicit sensitivity list, sequential always block, asynch. reset
+        // ------Since the always block is sequential, all the assignments are non-blocking. -------
+        // asynchronous, active-low reset
+        if (!rst_n) begin
+            count <= 4'b0000;
+        end
+
+        // synchronous part
+        else begin
+            // **** Load (possible external value to drive the counter) ****
+            if(load) begin
+                count <= load_value;
+            end
+            // If the counter is disabled, the loadvalue still sits in `count`, but there is not output.
+            
+            // **** Enabled ****
+            else if (en) begin
+                // direction: up
+                if(up_down) begin
+                    // wrap from 7 back to 0
+                    if (count >= 4'd7)  // I could have written count == 4'd7
+                        count <= 4'd0;
+                    else
+                        count <= count + 1;
+                end
+                // direction: down
+                else(!up_down) begin
+                    // wrap from 0 back to 7
+                    if (count <= 4'd0) // Again this could've been: count == 4'd0
+                        count <= 4'd7;
+                    else
+                        count <= count - 1;
+                end
+            end
+
+            // **** Disabled ****
+            /* Here we can write sth like:
+            else begin
+                count <= count
+            end
+            But as we know that in cases where there is no else statement, Verilog automatically assumes a latch
+            for holding the value the same as it was, there is no need for such statement
+            */
+        end
     end
 
 endmodule
