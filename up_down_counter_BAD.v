@@ -18,7 +18,7 @@ ASSIGNMENT:
 */
 
 
-module up_down_counter(
+module up_down_counter_BAD(
     input wire clk,
     input wire rst_n, // asynch active-low reset
     input wire up_down,  // 1 = count up, 0 = count down
