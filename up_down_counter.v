@@ -53,7 +53,7 @@ module up_down_counter(
                         count <= count + 1;
                 end
                 // direction: down
-                else(!up_down) begin
+                else if(!up_down) begin
                     // wrap from 0 back to 7
                     if (count <= 4'd0) // Again this could've been: count == 4'd0
                         count <= 4'd7;
@@ -61,7 +61,6 @@ module up_down_counter(
                         count <= count - 1;
                 end
             end
-
             // **** Disabled ****
             /* Here we can write sth like:
             else begin
@@ -72,5 +71,4 @@ module up_down_counter(
             */
         end
     end
-
 endmodule

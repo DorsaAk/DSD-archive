@@ -27,9 +27,10 @@ module tb_counter_display_full;
     reg [3:0] load_value;
     wire [3:0] count;
     wire [6:0] seg;
+    integer indicator = 0;
 
     // +-+-+-+-+-+-+-+-+- Function for Generating the Expected 7-seg Pattern +-+-+-+-+-+-+-+-+-
-    function [6:0] expected_seg_f;
+    function [6:0] expected_seg;
         input [3:0] val;
         begin
             case(val)
@@ -63,7 +64,7 @@ module tb_counter_display_full;
         .load_value(load_value),
         .count(count),
         .seg(seg)
-    )
+    );
 
     // +-+-+-+-+-+-+-+-+- Clk Generation +-+-+-+-+-+-+-+-+-
     always #5 clk = ~clk;
@@ -72,7 +73,6 @@ module tb_counter_display_full;
     task check_output;
         input [3:0] expected_count;
         input [6:0] expected_seg_val;
-        integer indicator = 0;
         begin
             #1; // wait a small time for propagation
             if(count !== expected_count) begin
@@ -110,19 +110,19 @@ module tb_counter_display_full;
         // ---------- Part 1: Asynchronous Reset ----------
         $display("\n--- Test 1: Asynchronous Reset ---");
         #3 rst_n = 0;
-        #10 check_output(4'd0, expected_seg_f(0));
+        #10 check_output(4'd0, expected_seg(0));
         rst_n = 1; // release reset
-        #10 check_output(4'd0, expected_seg_f(0)); // the clear output must still hold after a reset
+        #10 check_output(4'd0, expected_seg(0)); // the clear output must still hold after a reset
 
 
         // ---------- Part 2: Load Functionality ----------
-        $display("\n\n--- Test 2: Loading An External Value ---")
+        $display("\n\n--- Test 2: Loading An External Value ---");
         // Load value = 5
         load_value = 4'd5;
         load = 1;
         @(posedge clk);  // wait for the clock edge
         #1;
-        check_output(4'd5, expected_seg_f(5));
+        check_output(4'd5, expected_seg(5));
         load = 0; // set load back to zero after waiting for #1
 
         // >>> Now giving Load Value while the counter is disabled <<<
@@ -231,5 +231,5 @@ module tb_counter_display_full;
         $finish;
 
     end
-    
+
 endmodule
