@@ -1,0 +1,8 @@
+# [t=0] bin= 0  seg=1000000
+# [t=10000] bin= 5  seg=0010010
+# [t=20000] bin=10  seg=0001000
+# [t=30000] bin=15  seg=0001110
+# ** Note: $finish    : D:/University/Term6/FPGA/HW/HW2/tb_seven_seg_proc.v(25)
+#    Time: 40 ns  Iteration: 0  Instance: /tb_seven_seg_proc
+# 1
+# Break in Module tb_seven_seg_proc at D:/University/Term6/FPGA/HW/HW2/tb_seven_seg_proc.v line 25

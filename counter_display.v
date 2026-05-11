@@ -29,7 +29,7 @@ module counter_display(
     wire [3:0] count_val; // an intermediary signal between the modules, identically mapped to `counter`
 
     // Instance #1: up_down_counter
-    up_down_counter_BAD U_COUNTER (
+    up_down_counter U_COUNTER (
             .clk        (clk),
             .rst_n      (rst_n),
             .up_down    (up_down),
@@ -40,7 +40,7 @@ module counter_display(
     );
 
     // Instance #2: seven_seg_decoder
-    seven_seg_decoder U_DECODER (
+    seven_seg_decoder_proc_BAD U_DECODER (
             .bin (count_val),
             .seg (seg)
     );

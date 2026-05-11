@@ -12,6 +12,13 @@ Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
 Top level modules:
 	up_down_counter
 
+} {} {}} D:/University/Term6/FPGA/HW/HW2/seven_seg_decoder_proc.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW2/seven_seg_decoder_proc.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module seven_seg_decoder_proc
+
+Top level modules:
+	seven_seg_decoder_proc
+
 } {} {}} D:/University/Term6/FPGA/HW/HW2/tb_counter_display_full.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW2/tb_counter_display_full.v
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
 -- Compiling module tb_counter_display_full
@@ -26,18 +33,25 @@ Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
 Top level modules:
 	seven_seg_decoder
 
-} {} {}} D:/University/Term6/FPGA/HW/HW2/counter_display.v {1 {vlog -work work -vopt -stats=none {D:\University\Term6\FPGA\HW\HW2\counter_display.v}
-Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
--- Compiling module counter_display
-
-Top level modules:
-	counter_display
-
 } {} {}} D:/University/Term6/FPGA/HW/HW2/up_down_counter_BAD.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW2/up_down_counter_BAD.v
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
 -- Compiling module up_down_counter_BAD
 
 Top level modules:
 	up_down_counter_BAD
+
+} {} {}} D:/University/Term6/FPGA/HW/HW2/counter_display.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW2/counter_display.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module counter_display
+
+Top level modules:
+	counter_display
+
+} {} {}} D:/University/Term6/FPGA/HW/HW2/seven_seg_decoder_proc_BAD.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW2/seven_seg_decoder_proc_BAD.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module seven_seg_decoder_proc_BAD
+
+Top level modules:
+	seven_seg_decoder_proc_BAD
 
 } {} {}}

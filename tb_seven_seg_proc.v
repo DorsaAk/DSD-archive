@@ -13,22 +13,16 @@ module tb_seven_seg_proc;
     wire [6:0] seg_good;
 
     // Instantiate BOTH versions so we can compare in one waveform
-    seven_seg_decoder_proc_BAD  DUT_BAD  (.bin(bin), .seg(seg_bad));
+    // seven_seg_decoder_proc_BAD  DUT_BAD  (.bin(bin), .seg(seg_bad));
     seven_seg_decoder_proc      DUT_GOOD (.bin(bin), .seg(seg_good));
 
     initial begin
-        $dumpfile("partC_wave.vcd");
-        $dumpvars(0, tb_seven_seg_proc);
-
-        $monitor("[t=%0t] bin=%d  seg_bad=%b  seg_good=%b",
-                 $time, bin, seg_bad, seg_good);
-
-        bin = 4'd0;
-        #10 bin = 4'd5;
-        #10 bin = 4'd10;
-        #10 bin = 4'd15;
-        #10 bin = 4'd3;
-        #20 $finish;
-    end
+       $monitor("[t=%0t] bin=%d  seg=%b", $time, bin, seg_good);
+       bin = 4'd0;
+       #10 bin = 4'd5;
+       #10 bin = 4'd10;
+       #10 bin = 4'd15;
+       #10 $finish;
+   end
 
 endmodule
