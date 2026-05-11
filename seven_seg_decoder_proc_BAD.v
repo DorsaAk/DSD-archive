@@ -24,7 +24,7 @@ ASSIGNMENT
 
 module seven_seg_decoder_proc_BAD (
     input wire [3:0] bin,   // the binary value to decode (which comes from the counter)
-    output wire [6:0] seg   // 7-segment pattern, active-low
+    output reg [6:0] seg   // 7-segment pattern, active-low
 );
 
     always begin
