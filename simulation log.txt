@@ -1,0 +1,65 @@
+# =============================================
+#  Full Testbench for counter_display
+# =============================================
+# 
+# --- Test 1: Asynchronous Reset ---
+# PASS  at time 14000: count =  0, seg = 1000000
+# PASS  at time 25000: count =  0, seg = 1000000
+# 
+# 
+# --- Test 2: Loading An External Value ---
+# PASS  at time 37000: count =  5, seg = 0010010
+# PASS  at time 47000: count =  1, seg = 1111001
+# PASS  at time 57000: count =  3, seg = 0110000
+# 
+# 
+# --- Test 3: Enable = 0 (Hold) ---
+# PASS  at time 86000: count =  3, seg = 0110000
+# 
+# 
+# --- Test 4: Enable = 1 (Count Up) ---
+# PASS  at time 96000: count =  4, seg = 0011001
+# PASS  at time 106000: count =  5, seg = 0010010
+# PASS  at time 116000: count =  6, seg = 0000010
+# PASS  at time 126000: count =  7, seg = 1111000
+# 
+# --- Test 5: Up Wrapâaround ---
+# PASS  at time 136000: count =  0, seg = 1000000
+# PASS  at time 146000: count =  1, seg = 1111001
+# PASS  at time 156000: count =  2, seg = 0100100
+# 
+# --- Test 6: Count Down ---
+# PASS  at time 166000: count =  1, seg = 1111001
+# PASS  at time 176000: count =  0, seg = 1000000
+# 
+# --- Test 7: Down Wrapâaround ---
+# PASS  at time 186000: count =  7, seg = 1111000
+# PASS  at time 196000: count =  6, seg = 0000010
+# PASS  at time 206000: count =  5, seg = 0010010
+# 
+# --- Test 8: Load while enabled ---
+# PASS  at time 217000: count =  2, seg = 0100100
+# 
+# --- Test 9: Direction change midâcount ---
+# PASS  at time 226000: count =  3, seg = 0110000
+# PASS  at time 236000: count =  2, seg = 0100100
+# PASS  at time 246000: count =  1, seg = 1111001
+# 
+# --- Test 10: Hold, change direction, resume ---
+# PASS  at time 266000: count =  1, seg = 1111001
+# PASS  at time 276000: count =  2, seg = 0100100
+# 
+# --- Test 11: Load 0, count down to wrap ---
+# PASS  at time 287000: count =  0, seg = 1000000
+# PASS  at time 296000: count =  7, seg = 1111000
+# 
+# --- Test 12: Asynchronous reset midâoperation ---
+# PASS  at time 304000: count =  0, seg = 1000000
+# 
+# =============================================
+#  ALL TESTS PASSED
+# =============================================
+# ** Note: $finish    : D:/University/Term6/FPGA/HW/HW2/tb_counter_display_full.v(227)
+#    Time: 304 ns  Iteration: 0  Instance: /tb_counter_display_full
+# 1
+# Break in Module tb_counter_display_full at D:/University/Term6/FPGA/HW/HW2/tb_counter_display_full.v line 227
