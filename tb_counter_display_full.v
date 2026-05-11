@@ -27,7 +27,6 @@ module tb_counter_display_full;
     reg [3:0] load_value;
     wire [3:0] count;
     wire [6:0] seg;
-    integer indicator = 0;
 
     // +-+-+-+-+-+-+-+-+- Function for Generating the Expected 7-seg Pattern +-+-+-+-+-+-+-+-+-
     function [6:0] expected_seg;
@@ -78,19 +77,16 @@ module tb_counter_display_full;
             if(count !== expected_count) begin
                 $display("ERROR at time %0t: Expected count = %d, Got = %d",
                          $time, expected_count, count);
-                indicator = 1;
                 $stop;
             end 
             if (seg !== expected_seg_val) begin
                 $display("ERROR at time %0t: Expected seg = %b, Got = %b",
                          $time, expected_seg_val, seg);
-                indicator = 1;
                 $stop;
             end
-            if(indicator == 1) begin
-                $display("PASS  at time %0t: count = %d, seg = %b",
+            // If we get here, both checks passed
+            $display("PASS  at time %0t: count = %d, seg = %b",
                          $time, count, seg);
-            end
         end
     endtask
 
@@ -126,12 +122,12 @@ module tb_counter_display_full;
         load = 0; // set load back to zero after waiting for #1
 
         // >>> Now giving Load Value while the counter is disabled <<<
-        // In the case where the counter is enables, load_value still enters the counter if load = 1, eventhough it has no effect.
+        // load_value still enters the counter if load = 1, regardless of en
         load_value = 4'd1;
         load       = 1;
         @(posedge clk);
         #1;
-        check_output(4'd0, expected_seg(0));
+        check_output(4'd1, expected_seg(1));
         load = 0;
 
         // >>> Load value = 3 (to prepare for up‑count test) <<<
