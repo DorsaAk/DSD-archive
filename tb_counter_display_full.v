@@ -96,7 +96,7 @@ module tb_counter_display_full;
     initial begin
 
         // >>>>> Waveform Dumping <<<<<
-        $dumpfile("tb_counter_display_full.vcd") // output file
+        $dumpfile("tb_counter_display_full.vcd"); // output file
         $dumpvars(0, tb_counter_display_full);  // dump ALL signals in the testbench
         
         $display("=============================================");

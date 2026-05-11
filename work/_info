@@ -10,10 +10,10 @@ z2
 cModel Technology
 dD:/University/Term6/FPGA/HW/HW1
 T_opt
-!s110 1778518866
-V`U7G39zF:m4>KkhVfUON40
+!s110 1778519766
+V^FZoZacl5CLE42oz2f6lE1
 04 23 4 work tb_counter_display_full fast 0
-=1-a864f11d25cc-6a020b52-20d-49bc
+=1-a864f11d25cc-6a020ed6-cf-39c0
 o-quiet -auto_acc_if_foreign -work work +acc
 Z0 tCvgOpt 0
 n@_opt
@@ -65,23 +65,23 @@ R6
 R7
 R0
 vtb_counter_display_full
-!s110 1778518856
+!s110 1778519752
 !i10b 1
-!s100 <hRS3KPfahSc2D;f2JKo]0
+!s100 WANzLBQ^Y>ToE>ofN1BV93
 R2
-IDgX=39^KO=KnMb[O<1Vo31
+I[^Jzjn=DfIZQaRfmz`3co0
 R3
-w1778518823
+w1778519747
 8D:/University/Term6/FPGA/HW/HW2/tb_counter_display_full.v
 FD:/University/Term6/FPGA/HW/HW2/tb_counter_display_full.v
-!i122 8
-L0 19 213
+!i122 9
+L0 19 218
 R4
 R5
 r1
 !s85 0
 31
-!s108 1778518856.000000
+!s108 1778519752.000000
 !s107 D:/University/Term6/FPGA/HW/HW2/tb_counter_display_full.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW2/tb_counter_display_full.v|
 !i113 0
