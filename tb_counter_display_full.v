@@ -78,14 +78,14 @@ module tb_counter_display_full;
             if(count !== expected_count) begin
                 $display("ERROR at time %0t: Expected count = %d, Got = %d",
                          $time, expected_count, count);
-                $stop;
                 indicator = 1;
+                $stop;
             end 
             if (seg !== expected_seg_val) begin
                 $display("ERROR at time %0t: Expected seg = %b, Got = %b",
                          $time, expected_seg_val, seg);
-                $stop;
                 indicator = 1;
+                $stop;
             end
             if(indicator == 1) begin
                 $display("PASS  at time %0t: count = %d, seg = %b",
