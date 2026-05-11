@@ -40,7 +40,7 @@ module counter_display(
     );
 
     // Instance #2: seven_seg_decoder
-    seven_seg_decoder_proc_BAD U_DECODER (
+    seven_seg_decoder U_DECODER (
             .bin (count_val),
             .seg (seg)
     );
