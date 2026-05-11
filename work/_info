@@ -8,76 +8,86 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dD:/University/Term6/FPGA/HW/HW1
+Z0 dD:/University/Term6/FPGA/HW/HW1
 T_opt
 !s110 1778519766
 V^FZoZacl5CLE42oz2f6lE1
 04 23 4 work tb_counter_display_full fast 0
 =1-a864f11d25cc-6a020ed6-cf-39c0
-o-quiet -auto_acc_if_foreign -work work +acc
-Z0 tCvgOpt 0
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
 n@_opt
-OL;O;2020.4;71
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1778521596
+VjjL;o]P4KCVSGO8@N4hN82
+04 25 4 work tb_counter_display_simple fast 0
+=1-a864f11d25cc-6a0215fc-1ee-1ac8
+R1
+R2
+n@_opt1
+R3
 vcounter_display
-Z1 !s110 1778517925
+Z4 !s110 1778517925
 !i10b 1
 !s100 zLD5o8bJB[LMVS7>_2;6>2
-Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IUSW8Ecj_LkBCL;bc^P2Wg1
-Z3 dD:/University/Term6/FPGA/HW/HW2
+Z6 dD:/University/Term6/FPGA/HW/HW2
 w1778491721
 8D:/University/Term6/FPGA/HW/HW2/counter_display.v
 FD:/University/Term6/FPGA/HW/HW2/counter_display.v
 !i122 2
 L0 18 33
-Z4 VDg1SIo80bB@j0V0VzS_@n1
-Z5 OL;L;2020.4;71
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2020.4;71
 r1
 !s85 0
 31
-Z6 !s108 1778517925.000000
+Z9 !s108 1778517925.000000
 !s107 D:/University/Term6/FPGA/HW/HW2/counter_display.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW2/counter_display.v|
 !i113 0
-Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
 vseven_seg_decoder
-R1
+R4
 !i10b 1
 !s100 XSQfg3fCD]o8^K@BdnLXP1
-R2
+R5
 I1nF`@PPf[mX_g0WkA==nR0
-R3
+R6
 w1778452779
 8D:/University/Term6/FPGA/HW/HW2/seven_seg_decoder.v
 FD:/University/Term6/FPGA/HW/HW2/seven_seg_decoder.v
 !i122 3
 L0 25 24
-R4
-R5
+R7
+R8
 r1
 !s85 0
 31
-R6
+R9
 !s107 D:/University/Term6/FPGA/HW/HW2/seven_seg_decoder.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW2/seven_seg_decoder.v|
 !i113 0
-R7
-R0
+R10
+R2
 vtb_counter_display_full
 !s110 1778519752
 !i10b 1
 !s100 WANzLBQ^Y>ToE>ofN1BV93
-R2
+R5
 I[^Jzjn=DfIZQaRfmz`3co0
-R3
+R6
 w1778519747
 8D:/University/Term6/FPGA/HW/HW2/tb_counter_display_full.v
 FD:/University/Term6/FPGA/HW/HW2/tb_counter_display_full.v
 !i122 9
 L0 19 218
-R4
-R5
+R7
+R8
 r1
 !s85 0
 31
@@ -85,28 +95,51 @@ r1
 !s107 D:/University/Term6/FPGA/HW/HW2/tb_counter_display_full.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW2/tb_counter_display_full.v|
 !i113 0
-R7
-R0
-vup_down_counter
-!s110 1778518068
-!i10b 1
-!s100 CW]P?L;l:PNVzB_K20RRk3
+R10
 R2
-I<f8h6;31[7_^;11<lJl6T2
-R3
-w1778518065
-8D:/University/Term6/FPGA/HW/HW2/up_down_counter.v
-FD:/University/Term6/FPGA/HW/HW2/up_down_counter.v
-!i122 5
-L0 20 55
-R4
+vtb_counter_display_simple
+!s110 1778521575
+!i10b 1
+!s100 g5@h6T4jDFM79o]H2ZFab3
 R5
+Ic>RnjmeJD5VJ11CUcM5nP0
+R6
+w1778521521
+8D:/University/Term6/FPGA/HW/HW2/tb_counter_display_simple.v
+FD:/University/Term6/FPGA/HW/HW2/tb_counter_display_simple.v
+!i122 11
+L0 22 77
+R7
+R8
 r1
 !s85 0
 31
-!s108 1778518068.000000
-!s107 D:/University/Term6/FPGA/HW/HW2/up_down_counter.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW2/up_down_counter.v|
+!s108 1778521575.000000
+!s107 D:/University/Term6/FPGA/HW/HW2/tb_counter_display_simple.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW2/tb_counter_display_simple.v|
 !i113 0
+R10
+R2
+vup_down_counter
+!s110 1778521573
+!i10b 1
+!s100 a6m5b2@d8T@4UL9Q0gYX=3
+R5
+I;B3O<PA1UFQzLQi<bXh^V0
+R6
+w1778519410
+8D:/University/Term6/FPGA/HW/HW2/up_down_counter_BAD.v
+FD:/University/Term6/FPGA/HW/HW2/up_down_counter_BAD.v
+!i122 10
+L0 21 55
 R7
-R0
+R8
+r1
+!s85 0
+31
+!s108 1778521572.000000
+!s107 D:/University/Term6/FPGA/HW/HW2/up_down_counter_BAD.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW2/up_down_counter_BAD.v|
+!i113 0
+R10
+R2
