@@ -35,7 +35,7 @@ module LFSR_top_if #(
     //* ---------------------------------------------------------
     //* 2. Generate-case block for conditional instantiation
     //* ---------------------------------------------------------
-    //# More on generate if at the end of the code
+    //# More on generate-if at the end of the code
     generate
         //* CONFIGURATION 0: 4-bit LFSR
         if (LFSR_TYPE == 0) begin: lfsr_config_0
