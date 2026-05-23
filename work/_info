@@ -10,10 +10,10 @@ z2
 cModel Technology
 dD:/University/Term6/FPGA/HW/HW2
 T_opt
-!s110 1779562619
-VMaR25i6f7z@fCnPW7^ZFz1
+!s110 1779564544
+V[TW5;3][ccXmPQff6kgJb2
 04 7 4 work tb_lfsr fast 0
-=1-a864f11d25cc-6a11f87b-26-1d8
+=1-a864f11d25cc-6a120000-5d-5dfc
 o-quiet -auto_acc_if_foreign -work work +acc
 Z0 tCvgOpt 0
 n@_opt
@@ -90,23 +90,23 @@ R7
 R0
 n@l@f@s@r_top_if
 vtb_lfsr
-!s110 1779562609
+!s110 1779564536
 !i10b 1
-!s100 iA8K;h[OJQMAcXbT5LK1o3
+!s100 c40mFELkC^O76jkTQ7:?[1
 R2
-IofLPfg?F^X3F62L@1EIfd0
+I<QE63IZFHc[_jXDkTW6I[3
 R3
-w1779562602
+w1779564529
 8D:\University\Term6\FPGA\HW\HW3\TB_LFSR.v
 FD:\University\Term6\FPGA\HW\HW3\TB_LFSR.v
-!i122 11
-L0 12 369
+!i122 16
+L0 12 377
 R4
 R5
 r1
 !s85 0
 31
-!s108 1779562609.000000
+!s108 1779564536.000000
 !s107 D:\University\Term6\FPGA\HW\HW3\TB_LFSR.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:\University\Term6\FPGA\HW\HW3\TB_LFSR.v|
 !i113 0

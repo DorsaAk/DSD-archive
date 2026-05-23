@@ -56,27 +56,26 @@ module tb_lfsr;
         // Golden sequence for 8-bit LFSR with TAPS = 8'b10111000
         // Initial state = 8'hAA, polynomial: x⁸ + x⁶ + x⁵ + x⁴ + 1
         // From the text file generated, we have:
-        golden_seq[0]: 8'b10101010
-        golden_seq[1]: 8'b11010101
-        golden_seq[2]: 8'b01101010
-        golden_seq[3]: 8'b00110101
-        golden_seq[4]: 8'b00011010
-        golden_seq[5]: 8'b00001101
-        golden_seq[6]: 8'b10000110
-        golden_seq[7]: 8'b11000011
-        golden_seq[8]: 8'b11100001
-        golden_seq[9]: 8'b01110000
-        golden_seq[10]: 8'b00111000
-        golden_seq[11]: 8'b10011100
-        golden_seq[12]: 8'b11001110
-        golden_seq[13]: 8'b01100111
-        golden_seq[14]: 8'b10110011
-        golden_seq[15]: 8'b11011001
-        golden_seq[16]: 8'b11101100
-        golden_seq[17]: 8'b11110110
-        golden_seq[18]: 8'b11111011
-        golden_seq[19]: 8'b01111101
-        golden_seq[20]: 8'b10111110
+        golden_seq[0] = 8'b10101010;
+        golden_seq[1] = 8'b11010101;
+        golden_seq[2] = 8'b01101010;
+        golden_seq[3] = 8'b00110101;
+        golden_seq[4] = 8'b00011010;
+        golden_seq[5] = 8'b00001101;
+        golden_seq[6] = 8'b10000110;
+        golden_seq[7] = 8'b11000011;
+        golden_seq[8] = 8'b11100001;
+        golden_seq[9] = 8'b01110000;
+        golden_seq[10] = 8'b00111000;
+        golden_seq[11] = 8'b10011100;
+        golden_seq[12] = 8'b11001110;
+        golden_seq[13] = 8'b01100111;
+        golden_seq[14] = 8'b10110011;
+        golden_seq[15] = 8'b11011001;
+        golden_seq[16] = 8'b11101100;
+        golden_seq[17] = 8'b11110110;
+        golden_seq[18] = 8'b11111011;
+        golden_seq[19] = 8'b01111101;
         
         // Display first 5 values for verification
         $display("Golden sequence initialized:");
@@ -106,29 +105,37 @@ module tb_lfsr;
         $display("\n=== Starting Sequence Check ===");
         $display("Time %0t: Checking %0d steps against golden sequence", $time, num_steps);
         
-        for (step = 0; step < num_steps; step = step + 1) begin
-            @(posedge clk);  // Sample at clock edge
-            #1;  // Small delay to avoid race conditions
-            
-            expected_val = golden_seq[step];
-            
-            // Compare with golden sequence
-            if (lfsr_out !== expected_val) begin
-                $display("ERROR at Step %0d: Expected 8'b%b, Got 8'b%b", 
-                         step, expected_val, lfsr_out);
-                error_count = error_count + 1;
-                test_pass = 0;
-            end else begin
-                $display("OK Step %0d: 8'b%b (matches golden)", step, lfsr_out);
-            end
-            
-            // Check that LFSR is not in all-zero state
-            if (!is_valid_state(lfsr_out)) begin
-                $display("ERROR at Step %0d: LFSR entered all-zero state!", step);
-                error_count = error_count + 1;
-                test_pass = 0;
-            end
+        // 1) Verify the current (loaded) state equals the first golden value
+        expected_val = golden_seq[0];
+        if(lfsr_out !== expected_val) begin
+            $display("ERROR at initial state: Expected 8'b%b, Got 8'b%b", expected_val, lfsr_out);
+            error_count = error_count +1;
+            test_pass =0;
+        end else begin
+            $display("OK initial state: 8'b%b (matches golden[0])", lfsr_out);
         end
+
+        // 2) Now shift and check subsequent steps
+        for (step = 1; step < num_steps; step = step + 1) begin
+        @(posedge clk);
+        #1;
+        expected_val = golden_seq[step];
+        if (lfsr_out !== expected_val) begin
+            $display("ERROR at Step %0d: Expected 8'b%b, Got 8'b%b",
+                     step, expected_val, lfsr_out);
+            error_count = error_count + 1;
+            test_pass = 0;
+        end else begin
+            $display("OK Step %0d: 8'b%b (matches golden)", step, lfsr_out);
+        end
+
+        // Check for all-zero state
+        if (!is_valid_state(lfsr_out)) begin
+            $display("ERROR at Step %0d: LFSR entered all-zero state!", step);
+            error_count = error_count + 1;
+            test_pass = 0;
+        end
+    end
         
         $display("=== Sequence Check Complete ===");
     end
