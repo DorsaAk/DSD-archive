@@ -29,9 +29,9 @@ def generate_golden_sequence(init_state, taps, width, steps):
 
 # 8-bit LFSR parameters
 WIDTH = 8
-TAPS = [1, 0, 0, 0, 1, 1, 1, 0] # x^8 + x^6 + x^5 + x^4 + 1
+TAPS = [0, 0, 0, 1, 1, 1, 0, 1] # x^8 + x^6 + x^5 + x^4 + 1
 INIT_STATE = 0xAA  # 8'b10101010
-STEPS = 20
+STEPS = 21
 
 # Generate sequence
 golden_seq = generate_golden_sequence(INIT_STATE, TAPS, WIDTH, STEPS)

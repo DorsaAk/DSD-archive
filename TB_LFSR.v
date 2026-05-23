@@ -49,48 +49,36 @@ module tb_lfsr;
         .random_out(random_out)
     );
     
-        //* ---------------------------------------------------------
-    //* 4. Load Golden Sequence from File
+    //* ---------------------------------------------------------
+    //* 4. Initialize Golden Sequence with Hardcoded Values
     //* ---------------------------------------------------------
     initial begin
-        integer file_status;
-        
-        // Try to load from file first
-        file_status = $readmemb("golden_sequence.txt", golden_seq);
-        
-        // If file loading fails, use hardcoded values as fallback
-        if (file_status == 0) begin
-            $display("WARNING: Could not open golden_sequence.txt");
-            $display("Using hardcoded golden sequence instead");
-            
-            // Golden sequence for 8-bit LFSR with TAPS = 8'b10111000
-            // Initial state = 8'hAA, polynomial: x⁸ + x⁶ + x⁵ + x⁴ + 1
-            golden_seq[0]  = 8'b10101010;  // Step 0: Initial state (0xAA)
-            golden_seq[1]  = 8'b11010101;  // Step 1
-            golden_seq[2]  = 8'b01101010;  // Step 2
-            golden_seq[3]  = 8'b10110101;  // Step 3
-            golden_seq[4]  = 8'b01011010;  // Step 4
-            golden_seq[5]  = 8'b10101101;  // Step 5
-            golden_seq[6]  = 8'b11010110;  // Step 6
-            golden_seq[7]  = 8'b01101011;  // Step 7
-            golden_seq[8]  = 8'b00110101;  // Step 8
-            golden_seq[9]  = 8'b10011010;  // Step 9
-            golden_seq[10] = 8'b01001101;  // Step 10
-            golden_seq[11] = 8'b10100110;  // Step 11
-            golden_seq[12] = 8'b11010011;  // Step 12
-            golden_seq[13] = 8'b01101001;  // Step 13
-            golden_seq[14] = 8'b10110100;  // Step 14
-            golden_seq[15] = 8'b01011010;  // Step 15
-            golden_seq[16] = 8'b10101101;  // Step 16
-            golden_seq[17] = 8'b11010110;  // Step 17
-            golden_seq[18] = 8'b01101011;  // Step 18
-            golden_seq[19] = 8'b10110101;  // Step 19
-        end else begin
-            $display("Successfully loaded golden sequence from golden_sequence.txt");
-        end
+        // Golden sequence for 8-bit LFSR with TAPS = 8'b10111000
+        // Initial state = 8'hAA, polynomial: x⁸ + x⁶ + x⁵ + x⁴ + 1
+        golden_seq[0]  = 8'b10101010;  // Step 0: Initial state (0xAA)
+
+        golden_seq[1]  = 8'b11010101;  // Step 1
+        golden_seq[2]  = 8'b11101010;  // Step 2
+        golden_seq[3]  = 8'b01110101;  // Step 3
+        golden_seq[4]  = 8'b00111010;  // Step 4
+        golden_seq[5]  = 8'b00011101;  // Step 5
+        golden_seq[6]  = 8'b00001110;  // Step 6
+        golden_seq[7]  = 8'b00000111;  // Step 7
+        golden_seq[8]  = 8'b10000011;  // Step 8
+        golden_seq[9]  = 8'b11000001;  // Step 9
+        golden_seq[10] = 8'b01100000;  // Step 10
+        golden_seq[11] = 8'b00110000;  // Step 11
+        golden_seq[12] = 8'b00011000;  // Step 12
+        golden_seq[13] = 8'b10001100;  // Step 13
+        golden_seq[14] = 8'b01000110;  // Step 14
+        golden_seq[15] = 8'b10100011;  // Step 15
+        golden_seq[16] = 8'b01010001;  // Step 16
+        golden_seq[17] = 8'b10101000;  // Step 17
+        golden_seq[18] = 8'b11010100;  // Step 18
+        golden_seq[19] = 8'b01101010;  // Step 19
         
         // Display first 5 values for verification
-        $display("First 5 golden values:");
+        $display("Golden sequence initialized:");
         for (i = 0; i < 5; i = i + 1) begin
             $display("  Step %0d: 8'b%b (0x%0h)", i, golden_seq[i], golden_seq[i]);
         end
