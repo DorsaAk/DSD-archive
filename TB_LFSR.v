@@ -55,27 +55,28 @@ module tb_lfsr;
     initial begin
         // Golden sequence for 8-bit LFSR with TAPS = 8'b10111000
         // Initial state = 8'hAA, polynomial: x⁸ + x⁶ + x⁵ + x⁴ + 1
-        golden_seq[0]  = 8'b10101010;  // Step 0: Initial state (0xAA)
-
-        golden_seq[1]  = 8'b11010101;  // Step 1
-        golden_seq[2]  = 8'b11101010;  // Step 2
-        golden_seq[3]  = 8'b01110101;  // Step 3
-        golden_seq[4]  = 8'b00111010;  // Step 4
-        golden_seq[5]  = 8'b00011101;  // Step 5
-        golden_seq[6]  = 8'b00001110;  // Step 6
-        golden_seq[7]  = 8'b00000111;  // Step 7
-        golden_seq[8]  = 8'b10000011;  // Step 8
-        golden_seq[9]  = 8'b11000001;  // Step 9
-        golden_seq[10] = 8'b01100000;  // Step 10
-        golden_seq[11] = 8'b00110000;  // Step 11
-        golden_seq[12] = 8'b00011000;  // Step 12
-        golden_seq[13] = 8'b10001100;  // Step 13
-        golden_seq[14] = 8'b01000110;  // Step 14
-        golden_seq[15] = 8'b10100011;  // Step 15
-        golden_seq[16] = 8'b01010001;  // Step 16
-        golden_seq[17] = 8'b10101000;  // Step 17
-        golden_seq[18] = 8'b11010100;  // Step 18
-        golden_seq[19] = 8'b01101010;  // Step 19
+        // From the text file generated, we have:
+        golden_seq[0]: 8'b10101010
+        golden_seq[1]: 8'b11010101
+        golden_seq[2]: 8'b01101010
+        golden_seq[3]: 8'b00110101
+        golden_seq[4]: 8'b00011010
+        golden_seq[5]: 8'b00001101
+        golden_seq[6]: 8'b10000110
+        golden_seq[7]: 8'b11000011
+        golden_seq[8]: 8'b11100001
+        golden_seq[9]: 8'b01110000
+        golden_seq[10]: 8'b00111000
+        golden_seq[11]: 8'b10011100
+        golden_seq[12]: 8'b11001110
+        golden_seq[13]: 8'b01100111
+        golden_seq[14]: 8'b10110011
+        golden_seq[15]: 8'b11011001
+        golden_seq[16]: 8'b11101100
+        golden_seq[17]: 8'b11110110
+        golden_seq[18]: 8'b11111011
+        golden_seq[19]: 8'b01111101
+        golden_seq[20]: 8'b10111110
         
         // Display first 5 values for verification
         $display("Golden sequence initialized:");
