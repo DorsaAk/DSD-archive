@@ -1,22 +1,17 @@
 /*
-
     MODULE: LFSR.v
-    
     PORTS:
         inputs: clk, rst_n, en, load, init_state
-        outputs: state, valid
-    
+        outputs: state, random_out 
     PARAMETERS:
         WIDTH, TAPS
-    
     DESCRIPTION:
         Models a simple, parametrized Fibonacci LFSR.
-
 */
 
 module LFSR #(
     parameter WIDTH = 8,  // represents the number of flip flops in the structure of the LFSR
-    parameter TAPS = 8'hB8  // this value for TAPS (1011 1000) garauntees a maximal-length sequence (longest period)
+    parameter [WIDTH-1:0] TAPS = 0  // tap mask: 1 = include in XOR feedback (default: no taps)
 )(
     input wire clk,
     input wire rst_n,  // active-low asynchronous reset
@@ -24,7 +19,7 @@ module LFSR #(
     input wire load,  // synchronous load
     input wire [WIDTH-1:0] init_state,  // value to load, equivalent to "seed"
     output reg [WIDTH-1:0] state,  // current LFS
-    output wire valid  // high is state is not all zeros (and the LFSR is not stuck)
+    output wire random_out  // alias for state
 )
 
     //* ---------------------------------------------------------
@@ -36,11 +31,11 @@ module LFSR #(
     genvar i;
     generate  //# refer to the end of the code on why we need a generate statement here
         for(i=0; i<WIDTH, i=i+1) begin: feedback_loop
-            assign feedback_chain[i+1] = feedback_chain[i] ^ state[i];
+            // assign feedback_chain[i+1] = feedback_chain[i] ^ state[i];
             // OR:
             // If TAPS[i] is 1, XOR the corresponding state bit. 
             // If TAPS[i] is 0, just pass the previous chain value.
-            // assign feedback_chain[i+1] = TAPS[i] ? (feedback_chain[i] ^ state[i]) : feedback_chain[i];
+            assign feedback_chain[i+1] = TAPS[i] ? (feedback_chain[i] ^ state[i]) : feedback_chain[i];
         end
     endgenerate
 
@@ -79,7 +74,7 @@ module LFSR #(
         end
     endfunction
 
-    assign valid = is_valid_state(state);
+    assign random_out = state;
 
 endmodule
 
