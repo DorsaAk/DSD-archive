@@ -255,6 +255,7 @@ module tb_lfsr;
     //* ---------------------------------------------------------
     //* 9. TASK: init_golden_sequence
     //* ---------------------------------------------------------
+    integer i;
     task init_golden_sequence;
         integer file_status;
     begin

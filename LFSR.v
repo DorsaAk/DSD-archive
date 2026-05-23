@@ -20,7 +20,7 @@ module LFSR #(
     input wire [WIDTH-1:0] init_state,  // value to load, equivalent to "seed"
     output reg [WIDTH-1:0] state,  // current LFS
     output wire random_out  // alias for state
-)
+);
 
     //* ---------------------------------------------------------
     //* 1. Generate Statement: Parameterized Feedback Logic
@@ -30,7 +30,7 @@ module LFSR #(
 
     genvar i;
     generate  //# refer to the end of the code on why we need a generate statement here
-        for(i=0; i<WIDTH, i=i+1) begin: feedback_loop
+        for(i=0; i<WIDTH; i=i+1) begin: feedback_loop
             // assign feedback_chain[i+1] = feedback_chain[i] ^ state[i];
             // OR:
             // If TAPS[i] is 1, XOR the corresponding state bit. 
@@ -49,7 +49,7 @@ module LFSR #(
     always @(posedge clk or negedge rst_n) begin // asynch. reset
         if(!rst_n) begin
             // set to all 1s on reset to prevent getting stuck in 0
-            state <= {WIDTH{1'b'1}};
+            state <= {WIDTH{1'b1}};
         end else if (load) begin
             // synchronous load
             // prevent loading all 0s (load all 1s instead)
@@ -59,7 +59,7 @@ module LFSR #(
                 state <= init_state; // if not all zero, load the value into state
         end else if (en) begin
                 //! shift right and insert the calculated feedback bit at MSB
-                state <= {feedback_bit, state[WIDTH-1:1]}
+                state <= {feedback_bit, state[WIDTH-1:1]};
         end
     end
 
@@ -68,7 +68,8 @@ module LFSR #(
     //* ---------------------------------------------------------
     // A combinational function to check if the state is non-zero
     //# For more on the use of `function`, refer to the end of the code
-    function automatic logic is_valid_state(input [WIDTH-1:0] current_state);
+    function is_valid_state;
+        input [WIDTH-1:0] current_state;
         begin
             is_valid_state = (current_state != {WIDTH{1'b0}});
         end
