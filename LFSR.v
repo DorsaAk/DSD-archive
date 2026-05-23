@@ -98,7 +98,7 @@ endmodule
     readability. They take inputs, execute instantly and return exactly one value.
 
     What we did here: We defined is_valid_state to check if the current_state is non-zero.
-    We then called this function in a continuous assign valid = ... statement.
+    We will then call the function in the testbench.
 
     HARDWARE IMPLICATION POV:
         Synthesizable functions map purely to combinational logic gates (AND, OR, NOT, etc.).
