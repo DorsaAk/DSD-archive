@@ -1,26 +1,18 @@
-D:/University/Term6/FPGA/HW/HW3/LFSR_top_if.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW3/LFSR_top_if.v
+D:/University/Term6/FPGA/HW/HW3/LFSR.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW3/LFSR.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module LFSR
+
+Top level modules:
+	LFSR
+
+} {} {}} D:/University/Term6/FPGA/HW/HW3/LFSR_top_if.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW3/LFSR_top_if.v
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
 -- Compiling module LFSR_top_if
 
 Top level modules:
 	LFSR_top_if
 
-} {} {}} D:/University/Term6/FPGA/HW/HW3/LFSR.v {0 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW3/LFSR.v
-Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
--- Compiling module LFSR
-** Error: (vlog-13069) D:/University/Term6/FPGA/HW/HW3/LFSR.v(33): near ",": syntax error, unexpected ','.
-** Error: D:/University/Term6/FPGA/HW/HW3/LFSR.v(62): (vlog-2730) Undefined variable: 'feedback_bit'.
-** Error: (vlog-13069) D:/University/Term6/FPGA/HW/HW3/LFSR.v(63): near "end": syntax error, unexpected end, expecting ';'.
-** Error: D:/University/Term6/FPGA/HW/HW3/LFSR.v(73): (vlog-2730) Undefined variable: 'is_valid_state'.
-** Error: D:/University/Term6/FPGA/HW/HW3/LFSR.v(73): (vlog-2730) Undefined variable: 'current_state'.
-** Error: (vlog-13069) D:/University/Term6/FPGA/HW/HW3/LFSR.v(75): near "endfunction": syntax error, unexpected endfunction.
-
-} {4.0 10.0} {}} D:/University/Term6/FPGA/HW/HW3/TB_LFSR.v {0 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW3/TB_LFSR.v
-Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
--- Compiling module tb_lfsr
-** Error: (vlog-13032) D:/University/Term6/FPGA/HW/HW3/TB_LFSR.v(258): near ";": Syntax error.
-
-} {4.0 5.0} {}} D:/University/Term6/FPGA/HW/HW3/LFSR_top_case.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW3/LFSR_top_case.v
+} {} {}} D:/University/Term6/FPGA/HW/HW3/LFSR_top_case.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW3/LFSR_top_case.v
 Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
 -- Compiling module lfsr_top_case
 
