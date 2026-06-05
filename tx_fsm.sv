@@ -1,7 +1,7 @@
 /*
 
 MODULE: tx_fsm.sv
-    This is the transmitter module in the serial communication we model
+    This is the transmitter side in the serial communication we model
 
 PORTS:
     Parameter: DATA_WIDTH
@@ -19,6 +19,7 @@ SPECS & REQUIREMENTS:
     5. While trasmitting the start input is ignored (the connection is non-resumeable).
     6. The FSM is a Moore one and the seria_out signal is a combination of the current state only.
     7. Each state lasts exactly one clock cycle
+
 */
 
 
@@ -49,14 +50,14 @@ module tx_fsm #(
     logic [DATA_WIDTH-1:0] data_reg;
     always_ff @(posedge clk or negedge reset_n) begin
         if(reset_n == 0) begin
-            data_reg <= `0;
+            data_reg <= 0;
         end else if (current_state == IDLE && start) begin // if we are right at our starting point...
             data_reg <= data_in; // register the incoming data_in into data_reg
         end
     end
 
     //* =========================================================================
-    //* Sequential State Register (Requirement: 3-block style)
+    //* BLOCK #1: Sequential State Register
     //* =========================================================================
     //# This is where the next_state is assigned to the current_state at each clock edge
     always_ff @( posedge clk or negedge reset_n ) begin // asynchronous reset
@@ -68,7 +69,7 @@ module tx_fsm #(
     end
 
     //* =========================================================================
-    //* Combinational Next-State Logic (Requirement: 3-block style)
+    //* BLOCK #2: Combinational Next-State Logic
     //* =========================================================================
     //# This is where we determine what the next_state will be based on the current_state
     always_comb begin
@@ -88,7 +89,7 @@ module tx_fsm #(
     end
 
     //* =========================================================================
-    //* Combinational Output Logic (Requirement: 3-block style)
+    //* BLOCK #3: Combinational Output Logic
     //* =========================================================================
     //# This is where we determine the output signal. Since we aim for a Moore FSM, the output depends
     //# solely on the current state.

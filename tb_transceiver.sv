@@ -41,7 +41,7 @@ module tb_transceiver;
         .seria_in(serial_line),
         .data_out(data_out),
         .data_valid(data_valid)
-    )
+    );
 
     // ------ Generating a 50MHz clk signal ------
     initial begin
@@ -58,7 +58,7 @@ module tb_transceiver;
         fd = $fopen("tb_log_file.txt", "w");  // "w" denotes completely overwriting the file each run
         if (fd == 0) begin
             $display("Error: Could not open file.");
-            $finish;
+            $finish();
         end
 
         //# Initialize
@@ -129,6 +129,6 @@ endmodule
 /*
     '===' is used to compare values that might contain x (unknown) or z (high impedance) states, ensuring an exact bit-by-bit match across all four states (0, 1, x, z).
     The regular '==' only compares 0 and 1. If there is an x or z in either of the operands being compared, the result of the comparison is x (unknown).
-    
+
     For the case occuring in the code, it's safer to use '===' in order to cover the potential failures and x/z generating of the modules under test.
 */
