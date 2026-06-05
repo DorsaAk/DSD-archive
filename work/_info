@@ -9,78 +9,87 @@ z2
 !i10f 100
 cModel Technology
 dD:/University/Term6/FPGA/HW/HW3
+T_opt
+!s110 1780687868
+V`ScO_llEa8QG8[RAP?@`L2
+04 14 4 work tb_transceiver fast 0
+=1-a864f11d25cc-6a2323fc-2c1-d60
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
 vrx_fsm
-Z0 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-!s110 1780684347
+Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1780687446
 !i10b 1
-!s100 eG[EKTkHUWVoJbXc3FR1[0
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IkJgUlOKUZJ;SPjDB6=5dO1
+!s100 ?QBgAd0`gB`U:5]^HfLkU0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I4Zcl4C:0P[0mGeBNbUCzE0
 S1
-Z2 dD:/University/Term6/FPGA/HW/HW4
-w1780684342
+Z3 dD:/University/Term6/FPGA/HW/HW4
+w1780687438
 8D:/University/Term6/FPGA/HW/HW4/rx_fsm.sv
 FD:/University/Term6/FPGA/HW/HW4/rx_fsm.sv
-!i122 2
-L0 29 106
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-Z4 OL;L;2020.4;71
+!i122 8
+L0 29 110
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
 r1
 !s85 0
 31
-!s108 1780684347.000000
+!s108 1780687446.000000
 !s107 D:/University/Term6/FPGA/HW/HW4/rx_fsm.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/University/Term6/FPGA/HW/HW4/rx_fsm.sv|
 !i113 0
-Z5 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z6 tCvgOpt 0
-vtb_transceiver
+Z6 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R0
-Z7 !s110 1780684322
-!i10b 1
-!s100 i?VnYJZ6[72^lLM>2z8hB1
+vtb_transceiver
 R1
-IehGK7R;3LKdZPI[C<g`ZX2
-S1
+!s110 1780687859
+!i10b 1
+!s100 1kdFJm8i:O1:hjGajMi=32
 R2
-w1780684281
+IBTBlGS3R[MZZb<kR=C`9l2
+S1
+R3
+w1780687672
 8D:/University/Term6/FPGA/HW/HW4/tb_transceiver.sv
 FD:/University/Term6/FPGA/HW/HW4/tb_transceiver.sv
-!i122 0
-L0 11 115
-R3
+!i122 9
+L0 11 116
 R4
+R5
 r1
 !s85 0
 31
-Z8 !s108 1780684322.000000
+!s108 1780687859.000000
 !s107 D:/University/Term6/FPGA/HW/HW4/tb_transceiver.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/University/Term6/FPGA/HW/HW4/tb_transceiver.sv|
 !i113 0
-R5
 R6
-vtx_fsm
 R0
-R7
-!i10b 1
-!s100 WPzYb[K@EL@<5`ON_CMoa2
+vtx_fsm
 R1
-I2DG2N=olU:dlREgZGVOeA0
-S1
+!s110 1780687010
+!i10b 1
+!s100 T>aFI<Fm9f9ShkX]HZj[N1
 R2
-w1780684319
+I:748DSOmRLGOC4:i;]Th>1
+S1
+R3
+w1780686967
 8D:/University/Term6/FPGA/HW/HW4/tx_fsm.sv
 FD:/University/Term6/FPGA/HW/HW4/tx_fsm.sv
-!i122 1
-L0 26 84
-R3
+!i122 6
+L0 26 86
 R4
+R5
 r1
 !s85 0
 31
-R8
+!s108 1780687010.000000
 !s107 D:/University/Term6/FPGA/HW/HW4/tx_fsm.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/University/Term6/FPGA/HW/HW4/tx_fsm.sv|
 !i113 0
-R5
 R6
+R0

@@ -1,0 +1,15 @@
+D:/University/Term6/FPGA/HW/HW4/tx_fsm.sv {1 {vlog -work work -vopt -sv -stats=none D:/University/Term6/FPGA/HW/HW4/tx_fsm.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module tx_fsm
+
+Top level modules:
+	tx_fsm
+
+} {} {}} D:/University/Term6/FPGA/HW/HW4/rx_fsm.sv {1 {vlog -work work -vopt -sv -stats=none D:/University/Term6/FPGA/HW/HW4/rx_fsm.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module rx_fsm
+
+Top level modules:
+	rx_fsm
+
+} {} {}}
