@@ -123,7 +123,7 @@ module rx_fsm #(
             if(current_state == BIT0 || current_state == BIT1 ||
                current_state == BIT2 || current_state == BIT3) begin
                 // the bits of serial_in enter one by one and shift the content of shift_reg 
-                shift_reg <= {serial_in, shift_reg[DATA_WIDTH-1 : 1]};  
+                shift_reg <= {serial_in_prev, shift_reg[DATA_WIDTH-1 : 1]};  
             end
 
             // Output the accumulated word only when frame is successfully received (STOP is valid and thus the state DONE occurs)
