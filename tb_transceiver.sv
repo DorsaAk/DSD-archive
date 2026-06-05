@@ -52,6 +52,13 @@ module tb_transceiver;
     end 
     
 
+    //* Waveform generation
+    initial begin
+        $dumpfile("waveform.vcd"); // Name of the output waveform file
+        $dumpvars(0, tb_transceiver); // '0' means dump all signals in this module and below
+    end
+
+
     //* ============ The Test Sequence ============
     initial begin
         //# open the log file for writing
