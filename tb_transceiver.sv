@@ -38,7 +38,7 @@ module tb_transceiver;
     rx_fsm #(.DATA_WIDTH (DATA_WIDTH)) dut_rx (
         .clk(clk),
         .reset_n(reset_n),
-        .seria_in(serial_line),
+        .serial_in(serial_line),
         .data_out(data_out),
         .data_valid(data_valid)
     );
@@ -103,6 +103,7 @@ module tb_transceiver;
 
             //# Now waiting for data_valid to be asserted (by the RX side)
             wait (data_valid == 1'b1);
+            @(posedge clk);
 
             //# Compare and log both to console and the text file
             // This is where the concept of comparing signed numbers in (System)Verilog is used.
