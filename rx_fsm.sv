@@ -75,6 +75,8 @@ module rx_fsm #(
             IDLE: begin
                 if (serial_in_prev == 1'b1 && serial_in == 1'b0) // Detect falling edge on serial_in (Start Bit)
                     next_state = START;
+                else
+                    next_state = IDLE;
             end
             START: next_state = BIT0;
             BIT0:  next_state = BIT1;
