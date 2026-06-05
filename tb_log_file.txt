@@ -1,0 +1,8 @@
+Starting Transceiver Tests...
+FAIL: Sent 3, Received 0
+FAIL: Sent 0, Received 3
+FAIL: Sent -4, Received 0
+FAIL: Sent 7, Received -4
+FAIL: Sent -8, Received 7
+FAIL: Sent -1, Received -8
+Simulation complete.

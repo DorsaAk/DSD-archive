@@ -102,8 +102,8 @@ module tb_transceiver;
             start = 0;
 
             //# Now waiting for data_valid to be asserted (by the RX side)
-            wait (data_valid == 1'b1);
-            @(posedge clk);
+            @(posedge data_valid); // Wait for the receiver to assert data_valid
+            @(negedge data_valid); // Wait for it to drop (guarantees data_out has securely updated)
 
             //# Compare and log both to console and the text file
             // This is where the concept of comparing signed numbers in (System)Verilog is used.
