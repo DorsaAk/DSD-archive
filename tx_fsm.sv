@@ -77,6 +77,8 @@ module tx_fsm #(
             IDLE: begin // when in IDLE, wait for the start pulse
                 if(start)
                     next_state = START;
+                else
+                    next_state = IDLE;
             end
             START:  next_state = BIT0;
             BIT0:   next_state = BIT1;
