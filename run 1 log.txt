@@ -1,0 +1,31 @@
+# Time =      0 ns | reset_n = 0 | in = 0 | Q = xxxx (Hex: x)
+# Time =   1000 ns | reset_n = 0 | in = 0 | Q = 0000 (Hex: 0)
+# Time =  12000 ns | reset_n = 1 | in = 0 | Q = 0000 (Hex: 0)
+# ** Error: $hold( posedge clk:15 ns, d:15 ns, 400 ps );
+#    Time: 15 ns  Iteration: 3  Process: /tb_timing_analysis/u_shift_register/ff0/#Hold# File: D:/University/Term6/FPGA/HW/HW5/dff_timing.v Line: 18
+# Time =  15000 ns | reset_n = 1 | in = 1 | Q = 0000 (Hex: 0)
+# ** Error: $hold( posedge clk:25 ns, d:25 ns, 400 ps );
+#    Time: 25 ns  Iteration: 3  Process: /tb_timing_analysis/u_shift_register/ff0/#Hold# File: D:/University/Term6/FPGA/HW/HW5/dff_timing.v Line: 18
+# Time =  25000 ns | reset_n = 1 | in = 0 | Q = 0000 (Hex: 0)
+# Time =  26000 ns | reset_n = 1 | in = 0 | Q = 0001 (Hex: 1)
+# ** Error: $hold( posedge clk:35 ns, d:35 ns, 400 ps );
+#    Time: 35 ns  Iteration: 3  Process: /tb_timing_analysis/u_shift_register/ff0/#Hold# File: D:/University/Term6/FPGA/HW/HW5/dff_timing.v Line: 18
+# Time =  35000 ns | reset_n = 1 | in = 1 | Q = 0001 (Hex: 1)
+# Time =  36000 ns | reset_n = 1 | in = 1 | Q = 1010 (Hex: a)
+# Time =  46000 ns | reset_n = 1 | in = 1 | Q = 0001 (Hex: 1)
+# ** Error: $hold( posedge clk:55 ns, d:55 ns, 400 ps );
+#    Time: 55 ns  Iteration: 3  Process: /tb_timing_analysis/u_shift_register/ff0/#Hold# File: D:/University/Term6/FPGA/HW/HW5/dff_timing.v Line: 18
+# Time =  55000 ns | reset_n = 1 | in = 0 | Q = 0001 (Hex: 1)
+# Time =  56000 ns | reset_n = 1 | in = 0 | Q = 1011 (Hex: b)
+# Time =  66000 ns | reset_n = 1 | in = 0 | Q = 1110 (Hex: e)
+# ** Error: $hold( posedge clk:75 ns, d:75 ns, 400 ps );
+#    Time: 75 ns  Iteration: 3  Process: /tb_timing_analysis/u_shift_register/ff0/#Hold# File: D:/University/Term6/FPGA/HW/HW5/dff_timing.v Line: 18
+# Time =  75000 ns | reset_n = 1 | in = 1 | Q = 1110 (Hex: e)
+# Time =  76000 ns | reset_n = 1 | in = 1 | Q = 1000 (Hex: 8)
+# Time =  86000 ns | reset_n = 1 | in = 1 | Q = 0001 (Hex: 1)
+# Time =  96000 ns | reset_n = 1 | in = 1 | Q = 1011 (Hex: b)
+# Time = 106000 ns | reset_n = 1 | in = 1 | Q = 1111 (Hex: f)
+# Time = 116000 ns | reset_n = 1 | in = 1 | Q = 0111 (Hex: 7)
+# Simulation completed successfully.
+# ** Note: $finish    : D:/University/Term6/FPGA/HW/HW5/tb_timing_analysis.sv(68)
+#    Time: 125 ns  Iteration: 1  Instance: /tb_timing_analysis
