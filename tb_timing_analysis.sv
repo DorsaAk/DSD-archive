@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
- tb_timing_analysis;
+module tb_timing_analysis;
 
     //* --------- parameters for easy manipulation during frequency sweeps ---------
     parameter real PERIOD = 10.0;
@@ -48,17 +48,17 @@
 
     //* --------- Synchronous inp[ut sequence stimulus ---------
     //# Drives the required data stream: 1, 0, 1, 1, 0, 0, 1
-    initial 
+    initial begin
         @(posedge reset_n);
         
         // Apply the test vector aligned strictly with the launching edge of clk_early
-        @(posedge clk_early); in = 1'b1; 
-        @(posedge clk_early); in = 1'b0;
-        @(posedge clk_early); in = 1'b1; 
-        @(posedge clk_early); in = 1'b1;
-        @(posedge clk_early); in = 1'b0; 
-        @(posedge clk_early); in = 1'b0; 
-        @(posedge clk_early); in = 1'b1;
+        @(posedge clk_early); #1; in = 1'b1; 
+        @(posedge clk_early); #1; in = 1'b0;
+        @(posedge clk_early); #1; in = 1'b1; 
+        @(posedge clk_early); #1; in = 1'b1;
+        @(posedge clk_early); #1; in = 1'b0; 
+        @(posedge clk_early); #1; in = 1'b0; 
+        @(posedge clk_early); #1; in = 1'b1;
         
         // Keep the clock active for a few extra master periods to push data across the pipelines
         repeat(5) @(posedge clk_master);
@@ -66,7 +66,7 @@
         // Terminate the simulation
         $display("Simulation completed successfully.");
         $finish;
-    
+    end    
 
 
     //* --------- Output Monitoring and Waveform Capture ---------
@@ -80,3 +80,4 @@
         $dumpvars(0, tb_timing_analysis); // Track every signal layer starting from this root scope
     end
 
+endmodule
