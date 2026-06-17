@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module tb_timing_analysis;
+ tb_timing_analysis;
 
     //* --------- parameters for easy manipulation during frequency sweeps ---------
     parameter real PERIOD = 10.0;
@@ -48,7 +48,7 @@ module tb_timing_analysis;
 
     //* --------- Synchronous inp[ut sequence stimulus ---------
     //# Drives the required data stream: 1, 0, 1, 1, 0, 0, 1
-    initial begin
+    initial 
         @(posedge reset_n);
         
         // Apply the test vector aligned strictly with the launching edge of clk_early
@@ -66,7 +66,7 @@ module tb_timing_analysis;
         // Terminate the simulation
         $display("Simulation completed successfully.");
         $finish;
-    end
+    
 
 
     //* --------- Output Monitoring and Waveform Capture ---------
@@ -80,4 +80,3 @@ module tb_timing_analysis;
         $dumpvars(0, tb_timing_analysis); // Track every signal layer starting from this root scope
     end
 
-endmodule

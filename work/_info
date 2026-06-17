@@ -10,10 +10,10 @@ z2
 cModel Technology
 dD:/University/Term6/FPGA/HW/HW4
 T_opt
-!s110 1781724030
-V^TZYW3j=_Y9lI752YT@4n3
+!s110 1781724348
+VnEK2mnaf^j;o[e9E0gDXR0
 04 18 4 work tb_timing_analysis fast 0
-=1-a864f11d25cc-6a32f37d-379-3e00
+=1-a864f11d25cc-6a32f4bc-62-44e4
 o-quiet -auto_acc_if_foreign -work work +acc
 Z0 tCvgOpt 0
 n@_opt
@@ -158,24 +158,24 @@ R12
 R0
 vtb_timing_analysis
 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-!s110 1781724017
+!s110 1781724310
 !i10b 1
-!s100 EghdhfHCc8g;J:AaabIj[0
+!s100 1d8mAhe2zKOD`zV]mo8IN1
 R2
-IcoLXVgBAzdl7Rd`B`?LCa1
+I3V2OPXOR5[n:QcecPW_[h0
 S1
 R3
-w1781723968
+w1781724294
 8D:/University/Term6/FPGA/HW/HW5/tb_timing_analysis.sv
 FD:/University/Term6/FPGA/HW/HW5/tb_timing_analysis.sv
-!i122 13
+!i122 14
 L0 3 81
 R7
 R8
 r1
 !s85 0
 31
-!s108 1781724017.000000
+!s108 1781724310.000000
 !s107 D:/University/Term6/FPGA/HW/HW5/tb_timing_analysis.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/University/Term6/FPGA/HW/HW5/tb_timing_analysis.sv|
 !i113 0
