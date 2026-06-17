@@ -12,7 +12,7 @@ module xor2 (out, a, b);
     assign #(tPD) out = a ^ b;
 endmodule
 
-module buf (out, in);
+module my_buf (out, in);
     parameter tPD = 0.3;
     output out;
     input in;
