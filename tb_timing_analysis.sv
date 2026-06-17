@@ -35,6 +35,16 @@ module tb_timing_analysis;
         .Q(Q)                  
     );
 
+    //* --------- Asynchronous Reset Control Logic ---------
+    initial begin
+        // Force immediate values at time zero to avoid 'x' states
+        in = 1'b0;
+        reset_n = 1'b0; // Activate the active-low reset
+        
+        // Hold the reset line low for exactly 12 ns as required by the spec
+        #12; 
+        reset_n = 1'b1; // Release the circuit from reset
+    end
 
     //* --------- Synchronous inp[ut sequence stimulus ---------
     //# Drives the required data stream: 1, 0, 1, 1, 0, 0, 1
