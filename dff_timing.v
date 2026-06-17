@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module dff_timing (
     input clk, d, reset_n,
     output q

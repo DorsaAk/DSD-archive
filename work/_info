@@ -9,166 +9,198 @@ z2
 !i10f 100
 cModel Technology
 dD:/University/Term6/FPGA/HW/HW4
+T_opt
+!s110 1781723759
+VIBL80>MZP1z8cEm<icA053
+04 18 4 work tb_timing_analysis fast 0
+=1-a864f11d25cc-6a32f26e-3b2-79a8
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
 vand2
-Z0 !s110 1781723072
+Z1 !s110 1781723543
 !i10b 1
-!s100 ^:c]28Gd9o;7=]XPz:?7o3
-Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IRm>A5EjDWe[8cWkS6bSSL2
-Z2 dD:/University/Term6/FPGA/HW/HW5
-Z3 w1781723063
-Z4 8D:/University/Term6/FPGA/HW/HW5/gates_timing.v
-Z5 FD:/University/Term6/FPGA/HW/HW5/gates_timing.v
-!i122 7
-L0 1 6
-Z6 VDg1SIo80bB@j0V0VzS_@n1
-Z7 OL;L;2020.4;71
+!s100 c?LN[DdNQD2mF1:EgP3OB0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IngeK7A?SB[ZP<1PCKnjYn1
+Z3 dD:/University/Term6/FPGA/HW/HW5
+Z4 w1781723530
+Z5 8D:/University/Term6/FPGA/HW/HW5/gates_timing.v
+Z6 FD:/University/Term6/FPGA/HW/HW5/gates_timing.v
+!i122 10
+L0 3 6
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2020.4;71
 r1
 !s85 0
 31
-Z8 !s108 1781723072.000000
-Z9 !s107 D:/University/Term6/FPGA/HW/HW5/gates_timing.v|
-Z10 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW5/gates_timing.v|
+Z9 !s108 1781723543.000000
+Z10 !s107 D:/University/Term6/FPGA/HW/HW5/gates_timing.v|
+Z11 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW5/gates_timing.v|
 !i113 0
-Z11 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z12 tCvgOpt 0
-vclk_gen
+Z12 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R0
-!i10b 1
-!s100 >2BWe6AMJ:fBI^Xem9WWb0
+vbuffer
 R1
-Ib<c]h`z6UTnbh@:<WR=Jh2
-R2
-w1781713984
-8D:/University/Term6/FPGA/HW/HW5/clk_gen.v
-FD:/University/Term6/FPGA/HW/HW5/clk_gen.v
-!i122 5
-L0 1 14
-R6
-R7
-r1
-!s85 0
-31
-R8
-!s107 D:/University/Term6/FPGA/HW/HW5/clk_gen.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW5/clk_gen.v|
-!i113 0
-R11
-R12
-vdff_timing
-R0
 !i10b 1
-!s100 ?`D?9I0BiPcTO3gKkFVlZ2
-R1
-I1M`LD7]e<9mLdcJPD`FkK1
+!s100 2kD<4j=@9dAZ>B=9BHVo91
 R2
-w1781713255
-8D:/University/Term6/FPGA/HW/HW5/dff_timing.v
-FD:/University/Term6/FPGA/HW/HW5/dff_timing.v
-!i122 6
-L0 1 18
-R6
-R7
-r1
-!s85 0
-31
-R8
-!s107 D:/University/Term6/FPGA/HW/HW5/dff_timing.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW5/dff_timing.v|
-!i113 0
-R11
-R12
-vmy_buf
-R0
-!i10b 1
-!s100 fiAXQY<nlU:H>`SD]B3CH0
-R1
-IcHT`k;]jC_he4EmQ2oY9J3
-R2
+I6PRTi21hffjFK<V3E6S<f2
 R3
 R4
 R5
-!i122 7
-L0 15 6
 R6
+!i122 10
+L0 17 6
 R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
+!i113 0
 R12
-vshift_register
 R0
+vclk_gen
+!s110 1781723749
+!i10b 1
+!s100 JcH@[8nf52BWbHK3BzeS21
+R2
+IfYJ@e<?<eD@[WGAOB^CO?3
+R3
+w1781723743
+8D:/University/Term6/FPGA/HW/HW5/clk_gen.v
+FD:/University/Term6/FPGA/HW/HW5/clk_gen.v
+!i122 12
+L0 3 14
+R7
+R8
+r1
+!s85 0
+31
+!s108 1781723749.000000
+!s107 D:/University/Term6/FPGA/HW/HW5/clk_gen.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW5/clk_gen.v|
+!i113 0
+R12
+R0
+vdff_timing
+!s110 1781723601
+!i10b 1
+!s100 2^RFc8Hlcmjiig2_YKd[J0
+R2
+I0kgEQ46?WDLDVBM`[n1RB2
+R3
+w1781723595
+8D:/University/Term6/FPGA/HW/HW5/dff_timing.v
+FD:/University/Term6/FPGA/HW/HW5/dff_timing.v
+!i122 11
+L0 3 18
+R7
+R8
+r1
+!s85 0
+31
+!s108 1781723601.000000
+!s107 D:/University/Term6/FPGA/HW/HW5/dff_timing.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW5/dff_timing.v|
+!i113 0
+R12
+R0
+vmy_buf
+Z13 !s110 1781723072
+!i10b 1
+!s100 fiAXQY<nlU:H>`SD]B3CH0
+R2
+IcHT`k;]jC_he4EmQ2oY9J3
+R3
+w1781723063
+R5
+R6
+!i122 7
+L0 15 6
+R7
+R8
+r1
+!s85 0
+31
+Z14 !s108 1781723072.000000
+R10
+R11
+!i113 0
+R12
+R0
+vshift_register
+R13
 !i10b 1
 !s100 <Zc;3nh[BRf=EIZnf>kVb3
-R1
-IE2UCZVL``?Tz<1k;YY6=V0
 R2
+IE2UCZVL``?Tz<1k;YY6=V0
+R3
 w1781714034
 8D:/University/Term6/FPGA/HW/HW5/shift_register.v
 FD:/University/Term6/FPGA/HW/HW5/shift_register.v
 !i122 8
 L0 1 17
-R6
 R7
+R8
 r1
 !s85 0
 31
-R8
+R14
 !s107 D:/University/Term6/FPGA/HW/HW5/shift_register.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/University/Term6/FPGA/HW/HW5/shift_register.v|
 !i113 0
-R11
 R12
+R0
 vtb_timing_analysis
 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-R0
+R13
 !i10b 1
 !s100 hM^`M3>?O0Nk1NmIYJI6Z1
-R1
+R2
 If:18zW1<0XPd_=G?::<KV2
 S1
-R2
+R3
 w1781722783
 8D:/University/Term6/FPGA/HW/HW5/tb_timing_analysis.sv
 FD:/University/Term6/FPGA/HW/HW5/tb_timing_analysis.sv
 !i122 9
 L0 3 71
-R6
 R7
+R8
 r1
 !s85 0
 31
-R8
+R14
 !s107 D:/University/Term6/FPGA/HW/HW5/tb_timing_analysis.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/University/Term6/FPGA/HW/HW5/tb_timing_analysis.sv|
 !i113 0
 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R12
-vxor2
 R0
-!i10b 1
-!s100 DAQ^EM5f:6_5MbCm?zb1?0
+vxor2
 R1
-IXj^5goIVIe@@X@aO095D@2
+!i10b 1
+!s100 Z_Z:bV:FC1n24AIfI@7;i3
 R2
+IbV_<R[cAcO5Nh^K]hX>9?2
 R3
 R4
 R5
-!i122 7
-L0 8 6
 R6
+!i122 10
+L0 10 6
 R7
+R8
 r1
 !s85 0
 31
-R8
 R9
 R10
-!i113 0
 R11
+!i113 0
 R12
+R0

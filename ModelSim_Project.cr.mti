@@ -1,0 +1,33 @@
+D:/University/Term6/FPGA/HW/HW5/dff_timing.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW5/dff_timing.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module dff_timing
+
+Top level modules:
+	dff_timing
+
+} {} {}} D:/University/Term6/FPGA/HW/HW5/gates_timing.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW5/gates_timing.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module and2
+-- Compiling module xor2
+-- Compiling module buffer
+
+Top level modules:
+	and2
+	xor2
+	buffer
+
+} {} {}} D:/University/Term6/FPGA/HW/HW5/tb_timing_analysis.sv {1 {vlog -work work -vopt -sv -stats=none D:/University/Term6/FPGA/HW/HW5/tb_timing_analysis.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module tb_timing_analysis
+
+Top level modules:
+	tb_timing_analysis
+
+} {} {}} D:/University/Term6/FPGA/HW/HW5/shift_register.v {1 {vlog -work work -vopt -stats=none D:/University/Term6/FPGA/HW/HW5/shift_register.v
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module shift_register
+
+Top level modules:
+	shift_register
+
+} {} {}}

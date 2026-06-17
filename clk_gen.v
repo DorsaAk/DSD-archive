@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module clk_gen #(parameter PERIOD = 10, SKEW = 0) (
     output clk_master,
     output clk_early,
