@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module and2 (out, a, b);
     parameter tPD = 0.6;
     output out;
@@ -12,7 +14,7 @@ module xor2 (out, a, b);
     assign #(tPD) out = a ^ b;
 endmodule
 
-module my_buf (out, in);
+module buffer (out, in);
     parameter tPD = 0.3;
     output out;
     input in;
