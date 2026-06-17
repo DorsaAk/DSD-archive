@@ -3,7 +3,7 @@
 module tb_timing_analysis;
 
     //* --------- parameters for easy manipulation during frequency sweeps ---------
-    parameter real PERIOD = 10.0;
+    parameter real PERIOD = 1.8;
     parameter real SKEW = 0.0;
 
 
