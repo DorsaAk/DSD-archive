@@ -4,7 +4,7 @@ module tb_timing_analysis;
 
     //* --------- parameters for easy manipulation during frequency sweeps ---------
     parameter real PERIOD = 10.0;
-    parameter real SKEW = -0.5;
+    parameter real SKEW = 0.5;
 
 
     //* --------- testbench wires and regs ---------
@@ -28,8 +28,9 @@ module tb_timing_analysis;
     );
 
     shift_register u_shift_register (
-        .clk_early(clk_early),
-        .clk_late(clk_late),  
+        // reverse assignment of clocks to simulate negative clock skew
+        .clk_early(clk_late),
+        .clk_late(clk_early),  
         .in(in),
         .reset_n(reset_n),     
         .Q(Q)                  
