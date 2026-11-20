@@ -1,0 +1,450 @@
+$date
+	Wed Jun 17 23:31:18 2026
+$end
+$version
+	ModelSim Version 2020.4
+$end
+$timescale
+	1ps
+$end
+
+$scope module tb_timing_analysis $end
+$var parameter 0 ! PERIOD $end
+$var parameter 0 " SKEW $end
+$var reg 1 # in $end
+$var reg 1 $ reset_n $end
+$var wire 1 % clk_master $end
+$var wire 1 & clk_early $end
+$var wire 1 ' clk_late $end
+$var wire 1 ( Q [3] $end
+$var wire 1 ) Q [2] $end
+$var wire 1 * Q [1] $end
+$var wire 1 + Q [0] $end
+
+$scope module u_clk_gen $end
+$var parameter 0 , PERIOD $end
+$var parameter 0 - SKEW $end
+$var wire 1 % clk_master $end
+$var wire 1 & clk_early $end
+$var wire 1 ' clk_late $end
+$var reg 1 . master $end
+$var reg 1 / late $end
+$upscope $end
+
+$scope module u_shift_register $end
+$var wire 1 & clk_early $end
+$var wire 1 ' clk_late $end
+$var wire 1 0 in $end
+$var wire 1 1 reset_n $end
+$var wire 1 ( Q [3] $end
+$var wire 1 ) Q [2] $end
+$var wire 1 * Q [1] $end
+$var wire 1 + Q [0] $end
+$var wire 1 2 q0 $end
+$var wire 1 3 q1 $end
+$var wire 1 4 q2 $end
+$var wire 1 5 q3 $end
+$var wire 1 6 and_out $end
+$var wire 1 7 xor_out $end
+
+$scope module ff0 $end
+$var parameter 0 8 tCQ $end
+$var parameter 0 9 tSU $end
+$var parameter 0 : tH $end
+$var wire 1 & clk $end
+$var wire 1 0 d $end
+$var wire 1 1 reset_n $end
+$var wire 1 2 q $end
+$var reg 1 ; q_int $end
+$upscope $end
+
+$scope module ff1 $end
+$var parameter 0 < tCQ $end
+$var parameter 0 = tSU $end
+$var parameter 0 > tH $end
+$var wire 1 & clk $end
+$var wire 1 2 d $end
+$var wire 1 1 reset_n $end
+$var wire 1 3 q $end
+$var reg 1 ? q_int $end
+$upscope $end
+
+$scope module ff2 $end
+$var parameter 0 @ tCQ $end
+$var parameter 0 A tSU $end
+$var parameter 0 B tH $end
+$var wire 1 ' clk $end
+$var wire 1 6 d $end
+$var wire 1 1 reset_n $end
+$var wire 1 4 q $end
+$var reg 1 C q_int $end
+$upscope $end
+
+$scope module ff3 $end
+$var parameter 0 D tCQ $end
+$var parameter 0 E tSU $end
+$var parameter 0 F tH $end
+$var wire 1 ' clk $end
+$var wire 1 7 d $end
+$var wire 1 1 reset_n $end
+$var wire 1 5 q $end
+$var reg 1 G q_int $end
+$upscope $end
+
+$scope module gate_and $end
+$var parameter 0 H tPD $end
+$var wire 1 6 out $end
+$var wire 1 3 a $end
+$var wire 1 2 b $end
+$upscope $end
+
+$scope module gate_xor $end
+$var parameter 0 I tPD $end
+$var wire 1 7 out $end
+$var wire 1 4 a $end
+$var wire 1 2 b $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0#
+0$
+0.
+x/
+0;
+0?
+0C
+0G
+r10 !
+r0.3 "
+r10 ,
+r0.3 -
+r0.8 8
+r0.5 9
+r0.4 :
+r0.8 <
+r0.5 =
+r0.4 >
+r0.8 @
+r0.5 A
+r0.4 B
+r0.8 D
+r0.5 E
+r0.4 F
+r0.6 H
+r0.6 I
+0%
+0&
+x'
+x+
+x*
+x)
+x(
+x2
+x3
+x4
+x5
+x6
+x7
+01
+00
+$end
+#300
+0/
+0'
+#800
+03
+02
+05
+04
+0+
+0*
+0)
+0(
+#1400
+07
+06
+#5000
+1.
+1&
+1%
+#5300
+1/
+1'
+#10000
+0.
+0&
+0%
+#10300
+0/
+0'
+#12000
+1$
+11
+#15000
+1.
+1&
+1%
+#15300
+1/
+1'
+#16000
+1#
+10
+#20000
+0.
+0&
+0%
+#20300
+0/
+0'
+#25000
+1.
+1&
+1%
+1;
+#25300
+1/
+1'
+#25800
+12
+1+
+#26000
+0#
+00
+#26400
+17
+#30000
+0.
+0&
+0%
+#30300
+0/
+0'
+#35000
+1.
+1&
+1%
+1?
+0;
+#35300
+1/
+1'
+1G
+#35800
+02
+13
+0+
+1*
+#36000
+1#
+10
+#36100
+15
+1(
+#36400
+07
+#40000
+0.
+0&
+0%
+#40300
+0/
+0'
+#45000
+1.
+1&
+1%
+1;
+0?
+#45300
+1/
+1'
+0G
+#45800
+03
+12
+1+
+0*
+#46100
+05
+0(
+#46400
+17
+#50000
+0.
+0&
+0%
+#50300
+0/
+0'
+#55000
+1.
+1&
+1%
+1?
+#55300
+1/
+1'
+1G
+#55800
+13
+1*
+#56000
+0#
+00
+#56100
+15
+1(
+#56400
+16
+#60000
+0.
+0&
+0%
+#60300
+0/
+0'
+#65000
+1.
+1&
+1%
+0;
+#65300
+1/
+1'
+1C
+#65800
+02
+0+
+#66100
+14
+1)
+#66400
+06
+#70000
+0.
+0&
+0%
+#70300
+0/
+0'
+#75000
+1.
+1&
+1%
+0?
+#75300
+1/
+1'
+0C
+#75800
+03
+0*
+#76000
+1#
+10
+#76100
+04
+0)
+#76700
+07
+#80000
+0.
+0&
+0%
+#80300
+0/
+0'
+#85000
+1.
+1&
+1%
+1;
+#85300
+1/
+1'
+0G
+#85800
+12
+1+
+#86100
+05
+0(
+#86400
+17
+#90000
+0.
+0&
+0%
+#90300
+0/
+0'
+#95000
+1.
+1&
+1%
+1?
+#95300
+1/
+1'
+1G
+#95800
+13
+1*
+#96100
+15
+1(
+#96400
+16
+#100000
+0.
+0&
+0%
+#100300
+0/
+0'
+#105000
+1.
+1&
+1%
+#105300
+1/
+1'
+1C
+#106100
+14
+1)
+#106700
+07
+#110000
+0.
+0&
+0%
+#110300
+0/
+0'
+#115000
+1.
+1&
+1%
+#115300
+1/
+1'
+0G
+#116100
+05
+0(
+#120000
+0.
+0&
+0%
+#120300
+0/
+0'
+#125000
+1.
+1&
+1%

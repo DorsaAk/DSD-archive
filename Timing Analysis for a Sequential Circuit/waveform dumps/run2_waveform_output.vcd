@@ -1,0 +1,488 @@
+$date
+	Wed Jun 17 23:22:07 2026
+$end
+$version
+	ModelSim Version 2020.4
+$end
+$timescale
+	1ps
+$end
+
+$scope module tb_timing_analysis $end
+$var parameter 0 ! PERIOD $end
+$var parameter 0 " SKEW $end
+$var reg 1 # in $end
+$var reg 1 $ reset_n $end
+$var wire 1 % clk_master $end
+$var wire 1 & clk_early $end
+$var wire 1 ' clk_late $end
+$var wire 1 ( Q [3] $end
+$var wire 1 ) Q [2] $end
+$var wire 1 * Q [1] $end
+$var wire 1 + Q [0] $end
+
+$scope module u_clk_gen $end
+$var parameter 0 , PERIOD $end
+$var parameter 0 - SKEW $end
+$var wire 1 % clk_master $end
+$var wire 1 & clk_early $end
+$var wire 1 ' clk_late $end
+$var reg 1 . master $end
+$var reg 1 / late $end
+$upscope $end
+
+$scope module u_shift_register $end
+$var wire 1 & clk_early $end
+$var wire 1 ' clk_late $end
+$var wire 1 0 in $end
+$var wire 1 1 reset_n $end
+$var wire 1 ( Q [3] $end
+$var wire 1 ) Q [2] $end
+$var wire 1 * Q [1] $end
+$var wire 1 + Q [0] $end
+$var wire 1 2 q0 $end
+$var wire 1 3 q1 $end
+$var wire 1 4 q2 $end
+$var wire 1 5 q3 $end
+$var wire 1 6 and_out $end
+$var wire 1 7 xor_out $end
+
+$scope module ff0 $end
+$var parameter 0 8 tCQ $end
+$var parameter 0 9 tSU $end
+$var parameter 0 : tH $end
+$var wire 1 & clk $end
+$var wire 1 0 d $end
+$var wire 1 1 reset_n $end
+$var wire 1 2 q $end
+$var reg 1 ; q_int $end
+$upscope $end
+
+$scope module ff1 $end
+$var parameter 0 < tCQ $end
+$var parameter 0 = tSU $end
+$var parameter 0 > tH $end
+$var wire 1 & clk $end
+$var wire 1 2 d $end
+$var wire 1 1 reset_n $end
+$var wire 1 3 q $end
+$var reg 1 ? q_int $end
+$upscope $end
+
+$scope module ff2 $end
+$var parameter 0 @ tCQ $end
+$var parameter 0 A tSU $end
+$var parameter 0 B tH $end
+$var wire 1 ' clk $end
+$var wire 1 6 d $end
+$var wire 1 1 reset_n $end
+$var wire 1 4 q $end
+$var reg 1 C q_int $end
+$upscope $end
+
+$scope module ff3 $end
+$var parameter 0 D tCQ $end
+$var parameter 0 E tSU $end
+$var parameter 0 F tH $end
+$var wire 1 ' clk $end
+$var wire 1 7 d $end
+$var wire 1 1 reset_n $end
+$var wire 1 5 q $end
+$var reg 1 G q_int $end
+$upscope $end
+
+$scope module gate_and $end
+$var parameter 0 H tPD $end
+$var wire 1 6 out $end
+$var wire 1 3 a $end
+$var wire 1 2 b $end
+$upscope $end
+
+$scope module gate_xor $end
+$var parameter 0 I tPD $end
+$var wire 1 7 out $end
+$var wire 1 4 a $end
+$var wire 1 2 b $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0#
+0$
+0.
+0/
+0;
+0?
+0C
+0G
+r1.8 !
+r0 "
+r1.8 ,
+r0 -
+r0.8 8
+r0.5 9
+r0.4 :
+r0.8 <
+r0.5 =
+r0.4 >
+r0.8 @
+r0.5 A
+r0.4 B
+r0.8 D
+r0.5 E
+r0.4 F
+r0.6 H
+r0.6 I
+0%
+0&
+0'
+x+
+x*
+x)
+x(
+x2
+x3
+x4
+x5
+x6
+x7
+01
+00
+$end
+#800
+03
+02
+05
+04
+0+
+0*
+0)
+0(
+#900
+1.
+1&
+1%
+1/
+1'
+#1400
+07
+06
+#1800
+0.
+0&
+0%
+0/
+0'
+#2700
+1.
+1&
+1%
+1/
+1'
+#3600
+0.
+0&
+0%
+0/
+0'
+#4500
+1.
+1&
+1%
+1/
+1'
+#5400
+0.
+0&
+0%
+0/
+0'
+#6300
+1.
+1&
+1%
+1/
+1'
+#7200
+0.
+0&
+0%
+0/
+0'
+#8100
+1.
+1&
+1%
+1/
+1'
+#9000
+0.
+0&
+0%
+0/
+0'
+#9900
+1.
+1&
+1%
+1/
+1'
+#10800
+0.
+0&
+0%
+0/
+0'
+#11700
+1.
+1&
+1%
+1/
+1'
+#12000
+1$
+11
+#12600
+0.
+0&
+0%
+0/
+0'
+#13500
+1.
+1&
+1%
+1/
+1'
+#14400
+0.
+0&
+0%
+0/
+0'
+#14500
+1#
+10
+#15300
+1.
+1&
+1%
+1;
+1/
+1'
+#16100
+12
+1+
+#16200
+0.
+0&
+0%
+0/
+0'
+#16300
+0#
+00
+#16700
+17
+#17100
+1.
+1&
+1%
+1?
+0;
+1/
+1'
+1G
+#17900
+15
+02
+13
+0+
+1*
+1(
+#18000
+0.
+0&
+0%
+0/
+0'
+#18100
+1#
+10
+#18500
+07
+#18900
+1.
+1&
+1%
+1;
+0?
+1/
+1'
+0G
+#19700
+05
+03
+12
+1+
+0*
+0(
+#19800
+0.
+0&
+0%
+0/
+0'
+#20300
+17
+#20700
+1.
+1&
+1%
+1?
+1/
+1'
+1G
+#21500
+15
+13
+1*
+1(
+#21600
+0.
+0&
+0%
+0/
+0'
+#21700
+0#
+00
+#22100
+16
+#22500
+1.
+1&
+1%
+0;
+1/
+1'
+1C
+#23300
+14
+02
+0+
+1)
+#23400
+0.
+0&
+0%
+0/
+0'
+#23900
+06
+#24300
+1.
+1&
+1%
+0?
+1/
+1'
+0C
+#25100
+04
+03
+0*
+0)
+#25200
+0.
+0&
+0%
+0/
+0'
+#25300
+1#
+10
+#25700
+07
+#26100
+1.
+1&
+1%
+1;
+1/
+1'
+0G
+#26900
+05
+12
+1+
+0(
+#27000
+0.
+0&
+0%
+0/
+0'
+#27500
+17
+#27900
+1.
+1&
+1%
+1?
+1/
+1'
+1G
+#28700
+15
+13
+1*
+1(
+#28800
+0.
+0&
+0%
+0/
+0'
+#29300
+16
+#29700
+1.
+1&
+1%
+1/
+1'
+1C
+#30500
+14
+1)
+#30600
+0.
+0&
+0%
+0/
+0'
+#31100
+07
+#31500
+1.
+1&
+1%
+1/
+1'
+0G
+#32300
+05
+0(
+#32400
+0.
+0&
+0%
+0/
+0'
+#33300
+1.
+1&
+1%

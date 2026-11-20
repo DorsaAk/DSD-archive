@@ -1,0 +1,41 @@
+# Time =      0 ns | reset_n = 0 | in = 0 | Q = xxxx (Hex: x)
+# Time =   1000 ns | reset_n = 0 | in = 0 | Q = 0000 (Hex: 0)
+# ** Error: $setup( d:800 ps, posedge clk:900 ps, 500 ps );
+#    Time: 900 ps  Iteration: 1  Process: /tb_timing_analysis/u_shift_register/ff1/#Setup# File: D:/University/Term6/FPGA/HW/HW5/dff_timing.v Line: 17
+# Time =  12000 ns | reset_n = 1 | in = 0 | Q = 0000 (Hex: 0)
+# Time =  15000 ns | reset_n = 1 | in = 1 | Q = 0000 (Hex: 0)
+# Time =  16000 ns | reset_n = 1 | in = 1 | Q = 0001 (Hex: 1)
+# Time =  16000 ns | reset_n = 1 | in = 0 | Q = 0001 (Hex: 1)
+# ** Error: $setup( d:16700 ps, posedge clk:17100 ps, 500 ps );
+#    Time: 17100 ps  Iteration: 2  Process: /tb_timing_analysis/u_shift_register/ff3/#Setup# File: D:/University/Term6/FPGA/HW/HW5/dff_timing.v Line: 17
+# Time =  18000 ns | reset_n = 1 | in = 0 | Q = 1010 (Hex: a)
+# Time =  18000 ns | reset_n = 1 | in = 1 | Q = 1010 (Hex: a)
+# ** Error: $setup( d:18500 ps, posedge clk:18900 ps, 500 ps );
+#    Time: 18900 ps  Iteration: 2  Process: /tb_timing_analysis/u_shift_register/ff3/#Setup# File: D:/University/Term6/FPGA/HW/HW5/dff_timing.v Line: 17
+# Time =  20000 ns | reset_n = 1 | in = 1 | Q = 0001 (Hex: 1)
+# ** Error: $setup( d:20300 ps, posedge clk:20700 ps, 500 ps );
+#    Time: 20700 ps  Iteration: 2  Process: /tb_timing_analysis/u_shift_register/ff3/#Setup# File: D:/University/Term6/FPGA/HW/HW5/dff_timing.v Line: 17
+# Time =  22000 ns | reset_n = 1 | in = 1 | Q = 1011 (Hex: b)
+# Time =  22000 ns | reset_n = 1 | in = 0 | Q = 1011 (Hex: b)
+# ** Error: $setup( d:22100 ps, posedge clk:22500 ps, 500 ps );
+#    Time: 22500 ps  Iteration: 2  Process: /tb_timing_analysis/u_shift_register/ff2/#Setup# File: D:/University/Term6/FPGA/HW/HW5/dff_timing.v Line: 17
+# Time =  23000 ns | reset_n = 1 | in = 0 | Q = 1110 (Hex: e)
+# ** Error: $setup( d:23900 ps, posedge clk:24300 ps, 500 ps );
+#    Time: 24300 ps  Iteration: 2  Process: /tb_timing_analysis/u_shift_register/ff2/#Setup# File: D:/University/Term6/FPGA/HW/HW5/dff_timing.v Line: 17
+# Time =  25000 ns | reset_n = 1 | in = 0 | Q = 1000 (Hex: 8)
+# Time =  25000 ns | reset_n = 1 | in = 1 | Q = 1000 (Hex: 8)
+# ** Error: $setup( d:25700 ps, posedge clk:26100 ps, 500 ps );
+#    Time: 26100 ps  Iteration: 2  Process: /tb_timing_analysis/u_shift_register/ff3/#Setup# File: D:/University/Term6/FPGA/HW/HW5/dff_timing.v Line: 17
+# Time =  27000 ns | reset_n = 1 | in = 1 | Q = 0001 (Hex: 1)
+# ** Error: $setup( d:27500 ps, posedge clk:27900 ps, 500 ps );
+#    Time: 27900 ps  Iteration: 2  Process: /tb_timing_analysis/u_shift_register/ff3/#Setup# File: D:/University/Term6/FPGA/HW/HW5/dff_timing.v Line: 17
+# Time =  29000 ns | reset_n = 1 | in = 1 | Q = 1011 (Hex: b)
+# ** Error: $setup( d:29300 ps, posedge clk:29700 ps, 500 ps );
+#    Time: 29700 ps  Iteration: 2  Process: /tb_timing_analysis/u_shift_register/ff2/#Setup# File: D:/University/Term6/FPGA/HW/HW5/dff_timing.v Line: 17
+# Time =  31000 ns | reset_n = 1 | in = 1 | Q = 1111 (Hex: f)
+# ** Error: $setup( d:31100 ps, posedge clk:31500 ps, 500 ps );
+#    Time: 31500 ps  Iteration: 2  Process: /tb_timing_analysis/u_shift_register/ff3/#Setup# File: D:/University/Term6/FPGA/HW/HW5/dff_timing.v Line: 17
+# Time =  32000 ns | reset_n = 1 | in = 1 | Q = 0111 (Hex: 7)
+# Simulation completed successfully.
+# ** Note: $finish    : D:/University/Term6/FPGA/HW/HW5/tb_timing_analysis.sv(68)
+#    Time: 33300 ps  Iteration: 1  Instance: /tb_timing_analysis
