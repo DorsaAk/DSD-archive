@@ -1,0 +1,683 @@
+$date
+	Mon May 11 20:47:15 2026
+$end
+$version
+	ModelSim Version 2020.4
+$end
+$timescale
+	1ps
+$end
+
+$scope module tb_counter_display_full $end
+$var reg 1 ! clk $end
+$var reg 1 " rst_n $end
+$var reg 1 # up_down $end
+$var reg 1 $ en $end
+$var reg 1 % load $end
+$var reg 4 & load_value [3:0] $end
+$var wire 1 ' count [3] $end
+$var wire 1 ( count [2] $end
+$var wire 1 ) count [1] $end
+$var wire 1 * count [0] $end
+$var wire 1 + seg [6] $end
+$var wire 1 , seg [5] $end
+$var wire 1 - seg [4] $end
+$var wire 1 . seg [3] $end
+$var wire 1 / seg [2] $end
+$var wire 1 0 seg [1] $end
+$var wire 1 1 seg [0] $end
+
+$scope function expected_seg $end
+$var reg 7 2 expected_seg [6:0] $end
+$var reg 4 3 val [3:0] $end
+$upscope $end
+
+$scope task check_output $end
+$var reg 4 4 expected_count [3:0] $end
+$var reg 7 5 expected_seg_val [6:0] $end
+$upscope $end
+
+$scope module DUT $end
+$var wire 1 6 clk $end
+$var wire 1 7 rst_n $end
+$var wire 1 8 up_down $end
+$var wire 1 9 en $end
+$var wire 1 : load $end
+$var wire 1 ; load_value [3] $end
+$var wire 1 < load_value [2] $end
+$var wire 1 = load_value [1] $end
+$var wire 1 > load_value [0] $end
+$var wire 1 ' count [3] $end
+$var wire 1 ( count [2] $end
+$var wire 1 ) count [1] $end
+$var wire 1 * count [0] $end
+$var wire 1 + seg [6] $end
+$var wire 1 , seg [5] $end
+$var wire 1 - seg [4] $end
+$var wire 1 . seg [3] $end
+$var wire 1 / seg [2] $end
+$var wire 1 0 seg [1] $end
+$var wire 1 1 seg [0] $end
+$var wire 1 ? count_val [3] $end
+$var wire 1 @ count_val [2] $end
+$var wire 1 A count_val [1] $end
+$var wire 1 B count_val [0] $end
+
+$scope module U_COUNTER $end
+$var wire 1 6 clk $end
+$var wire 1 7 rst_n $end
+$var wire 1 8 up_down $end
+$var wire 1 9 en $end
+$var wire 1 : load $end
+$var wire 1 ; load_value [3] $end
+$var wire 1 < load_value [2] $end
+$var wire 1 = load_value [1] $end
+$var wire 1 > load_value [0] $end
+$var reg 4 C count [3:0] $end
+$upscope $end
+
+$scope module U_DECODER $end
+$var wire 1 ? bin [3] $end
+$var wire 1 @ bin [2] $end
+$var wire 1 A bin [1] $end
+$var wire 1 B bin [0] $end
+$var wire 1 + seg [6] $end
+$var wire 1 , seg [5] $end
+$var wire 1 - seg [4] $end
+$var wire 1 . seg [3] $end
+$var wire 1 / seg [2] $end
+$var wire 1 0 seg [1] $end
+$var wire 1 1 seg [0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+1#
+0$
+0%
+b0 &
+bx 2
+bx 3
+bx C
+bx 4
+bx 5
+x*
+x)
+x(
+x'
+x1
+x0
+x/
+x.
+x-
+x,
+x+
+xB
+xA
+x@
+x?
+0>
+0=
+0<
+0;
+0:
+09
+18
+17
+06
+$end
+#3000
+0"
+07
+b0 C
+0B
+0A
+0@
+0?
+01
+00
+0/
+0.
+0-
+0,
+1+
+0*
+0)
+0(
+0'
+#5000
+1!
+16
+#10000
+0!
+06
+#13000
+b0 4
+b0 3
+b1000000 2
+b1000000 5
+#14000
+1"
+17
+#15000
+1!
+16
+#20000
+0!
+06
+#25000
+1!
+b101 &
+1%
+1>
+1<
+1:
+16
+b101 C
+1B
+1@
+10
+1-
+0+
+1*
+1(
+#30000
+0!
+06
+#35000
+1!
+16
+#36000
+b101 4
+b101 3
+b10010 2
+b10010 5
+#37000
+0%
+b1 &
+1%
+0<
+#40000
+0!
+06
+#45000
+1!
+16
+b1 C
+0@
+11
+00
+1.
+1,
+1+
+0(
+#46000
+b1 4
+b1 3
+b1111001 2
+b1111001 5
+#47000
+0%
+b11 &
+1%
+1=
+#50000
+0!
+06
+#55000
+1!
+16
+b11 C
+1A
+01
+0.
+0+
+1)
+#56000
+b11 4
+b11 3
+b110000 2
+b110000 5
+#57000
+0%
+0:
+#60000
+0!
+06
+#65000
+1!
+16
+#70000
+0!
+06
+#75000
+1!
+16
+#80000
+0!
+06
+#85000
+1!
+16
+#86000
+1$
+19
+#90000
+0!
+06
+#95000
+1!
+16
+b100 4
+b100 3
+b11001 2
+b11001 5
+b100 C
+0B
+0A
+1@
+11
+1.
+0,
+0*
+0)
+1(
+#100000
+0!
+06
+#105000
+1!
+16
+b101 4
+b101 3
+b10010 2
+b10010 5
+b101 C
+1B
+01
+10
+0.
+1*
+#110000
+0!
+06
+#115000
+1!
+16
+b110 4
+b110 3
+b10 2
+b10 5
+b110 C
+0B
+1A
+0-
+0*
+1)
+#120000
+0!
+06
+#125000
+1!
+16
+b111 4
+b111 3
+b1111000 2
+b1111000 5
+b111 C
+1B
+00
+1.
+1-
+1,
+1+
+1*
+#130000
+0!
+06
+#135000
+1!
+16
+b0 4
+b0 3
+b1000000 2
+b1000000 5
+b0 C
+0B
+0A
+0@
+0.
+0-
+0,
+0*
+0)
+0(
+#140000
+0!
+06
+#145000
+1!
+16
+b1 4
+b1 3
+b1111001 2
+b1111001 5
+b1 C
+1B
+11
+1.
+1-
+1,
+1*
+#150000
+0!
+06
+#155000
+1!
+16
+b10 4
+b10 3
+b100100 2
+b100100 5
+b10 C
+0B
+1A
+01
+1/
+0.
+0-
+0+
+0*
+1)
+#156000
+0#
+08
+#160000
+0!
+06
+#165000
+1!
+16
+b1 4
+b1 3
+b1111001 2
+b1111001 5
+b1 C
+1B
+0A
+11
+0/
+1.
+1-
+1+
+1*
+0)
+#170000
+0!
+06
+#175000
+1!
+16
+b0 4
+b0 3
+b1000000 2
+b1000000 5
+b0 C
+0B
+01
+0.
+0-
+0,
+0*
+#180000
+0!
+06
+#185000
+1!
+16
+b111 4
+b111 3
+b1111000 2
+b1111000 5
+b111 C
+1B
+1A
+1@
+1.
+1-
+1,
+1*
+1)
+1(
+#190000
+0!
+06
+#195000
+1!
+16
+b110 4
+b110 3
+b10 2
+b10 5
+b110 C
+0B
+10
+0.
+0-
+0,
+0+
+0*
+#200000
+0!
+06
+#205000
+1!
+16
+b101 4
+b101 3
+b10010 2
+b10010 5
+b101 C
+1B
+0A
+1-
+1*
+0)
+#206000
+b10 &
+1%
+0>
+1:
+#210000
+0!
+06
+#215000
+1!
+16
+b10 C
+0B
+1A
+0@
+00
+1/
+0-
+1,
+0*
+1)
+0(
+#216000
+b10 4
+b10 3
+b100100 2
+b100100 5
+#217000
+0%
+1#
+0:
+18
+#220000
+0!
+06
+#225000
+1!
+16
+b11 4
+b11 3
+b110000 2
+b110000 5
+b11 C
+1B
+0/
+1-
+1*
+#226000
+0#
+08
+#230000
+0!
+06
+#235000
+1!
+16
+b10 4
+b10 3
+b100100 2
+b100100 5
+b10 C
+0B
+1/
+0-
+0*
+#240000
+0!
+06
+#245000
+1!
+16
+b1 4
+b1 3
+b1111001 2
+b1111001 5
+b1 C
+1B
+0A
+11
+0/
+1.
+1-
+1+
+1*
+0)
+#246000
+0$
+09
+#250000
+0!
+06
+#255000
+1!
+16
+#260000
+0!
+06
+#265000
+1!
+16
+#266000
+1#
+1$
+18
+19
+#270000
+0!
+06
+#275000
+1!
+16
+b10 4
+b10 3
+b100100 2
+b100100 5
+b10 C
+0B
+1A
+01
+1/
+0.
+0-
+0+
+0*
+1)
+#276000
+b0 &
+1%
+0=
+1:
+#280000
+0!
+06
+#285000
+1!
+16
+b0 C
+0A
+0/
+0,
+1+
+0)
+#286000
+b0 4
+b0 3
+b1000000 2
+b1000000 5
+#287000
+0%
+0#
+0:
+08
+#290000
+0!
+06
+#295000
+1!
+16
+b111 4
+b111 3
+b1111000 2
+b1111000 5
+b111 C
+1B
+1A
+1@
+1.
+1-
+1,
+1*
+1)
+1(
+#300000
+0!
+06
+#303000
+0"
+b0 4
+b0 3
+b1000000 2
+b1000000 5
+07
+b0 C
+0B
+0A
+0@
+0.
+0-
+0,
+0*
+0)
+0(
+#304000
+1"
