@@ -1,0 +1,8 @@
+Starting Transceiver Tests...
+PASS: Sent 3, Received 3
+PASS: Sent 0, Received 0
+PASS: Sent -4, Received -4
+PASS: Sent 7, Received 7
+PASS: Sent -8, Received -8
+PASS: Sent -1, Received -1
+Simulation complete.
