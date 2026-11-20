@@ -1,0 +1,151 @@
+run -all
+# ============================================================
+#  REGISTER FILE TESTBENCH â Structural vs. RTL
+# ============================================================
+# [20000] --- RESET ---
+# [45000] READ  addr=00: struct=0000, rtl=0000 (expected 0000)
+#        struct: PASS
+#        rtl:    PASS
+# [50000] READ  addr=01: struct=0000, rtl=0000 (expected 0000)
+#        struct: PASS
+#        rtl:    PASS
+# [55000] READ  addr=10: struct=0000, rtl=0000 (expected 0000)
+#        struct: PASS
+#        rtl:    PASS
+# [60000] READ  addr=11: struct=0000, rtl=0000 (expected 0000)
+#        struct: PASS
+#        rtl:    PASS
+# [76000] WRITE addr=00 data=1010
+# [86000] WRITE addr=01 data=0101
+# [96000] WRITE addr=10 data=1100
+# [106000] WRITE addr=11 data=0011
+# [111000] READ  addr=00: struct=1010, rtl=1010 (expected 1010)
+#        struct: PASS
+#        rtl:    PASS
+# [116000] READ  addr=01: struct=0101, rtl=0101 (expected 0101)
+#        struct: PASS
+#        rtl:    PASS
+# [121000] READ  addr=10: struct=1100, rtl=1100 (expected 1100)
+#        struct: PASS
+#        rtl:    PASS
+# [126000] READ  addr=11: struct=0011, rtl=0011 (expected 0011)
+#        struct: PASS
+#        rtl:    PASS
+# [136000] WRITE addr=01 data=1111
+# [141000] READ  addr=00: struct=1010, rtl=1010 (expected 1010)
+#        struct: PASS
+#        rtl:    PASS
+# [146000] READ  addr=01: struct=1111, rtl=1111 (expected 1111)
+#        struct: PASS
+#        rtl:    PASS
+# [151000] READ  addr=10: struct=1100, rtl=1100 (expected 1100)
+#        struct: PASS
+#        rtl:    PASS
+# [156000] READ  addr=11: struct=0011, rtl=0011 (expected 0011)
+#        struct: PASS
+#        rtl:    PASS
+# [156000] --- RESET ---
+# [181000] READ  addr=00: struct=0000, rtl=0000 (expected 0000)
+#        struct: PASS
+#        rtl:    PASS
+# [186000] READ  addr=01: struct=0000, rtl=0000 (expected 0000)
+#        struct: PASS
+#        rtl:    PASS
+# [191000] READ  addr=10: struct=0000, rtl=0000 (expected 0000)
+#        struct: PASS
+#        rtl:    PASS
+# [196000] READ  addr=11: struct=0000, rtl=0000 (expected 0000)
+#        struct: PASS
+#        rtl:    PASS
+# [206000] WRITE addr=00 data=1010
+# [211000] CHK-Z addr=00: struct=zzzz, rtl=zzzz
+#        struct: PASS (Hi-Z)
+#        rtl:    PASS (Hi-Z)
+# [216000] CHK-Z addr=11: struct=zzzz, rtl=zzzz
+#        struct: PASS (Hi-Z)
+#        rtl:    PASS (Hi-Z)
+# [221000] READ-X addr=xx: struct=xxxx, rtl=xxxx
+#        struct: PASS (unknown: xxxx)
+#        rtl:    PASS (unknown: xxxx)
+# [226000] READ-X addr=zz: struct=xxxx, rtl=xxxx
+#        struct: PASS (unknown: xxxx)
+#        rtl:    PASS (unknown: xxxx)
+# [231000] READ-X addr=x0: struct=xxxx, rtl=xxxx
+#        struct: PASS (unknown: xxxx)
+#        rtl:    PASS (unknown: xxxx)
+# [236000] READ-X addr=z1: struct=xxxx, rtl=xxxx
+#        struct: PASS (unknown: xxxx)
+#        rtl:    PASS (unknown: xxxx)
+# [246000] WRITE addr=00 data=0001
+# [256000] WRITE addr=01 data=0010
+# [266000] WRITE addr=10 data=0100
+# [276000] WRITE addr=11 data=1000
+# [281000] READ  addr=00: struct=0001, rtl=0001 (expected 0001)
+#        struct: PASS
+#        rtl:    PASS
+# [286000] READ  addr=01: struct=0010, rtl=0010 (expected 0010)
+#        struct: PASS
+#        rtl:    PASS
+# [291000] READ  addr=10: struct=0100, rtl=0100 (expected 0100)
+#        struct: PASS
+#        rtl:    PASS
+# [296000] READ  addr=11: struct=1000, rtl=1000 (expected 1000)
+#        struct: PASS
+#        rtl:    PASS
+# [306000] WRITE addr=11 data=0000
+# [316000] WRITE addr=10 data=0000
+# [326000] WRITE addr=01 data=0000
+# [336000] WRITE addr=00 data=0000
+# [341000] READ  addr=00: struct=0000, rtl=0000 (expected 0000)
+#        struct: PASS
+#        rtl:    PASS
+# [346000] READ  addr=01: struct=0000, rtl=0000 (expected 0000)
+#        struct: PASS
+#        rtl:    PASS
+# [351000] READ  addr=10: struct=0000, rtl=0000 (expected 0000)
+#        struct: PASS
+#        rtl:    PASS
+# [356000] READ  addr=11: struct=0000, rtl=0000 (expected 0000)
+#        struct: PASS
+#        rtl:    PASS
+# [366000] WRITE addr=00 data=1111
+# [376000] WRITE addr=01 data=0000
+# [386000] WRITE addr=10 data=1111
+# [396000] WRITE addr=11 data=0000
+# [401000] READ  addr=00: struct=1111, rtl=1111 (expected 1111)
+#        struct: PASS
+#        rtl:    PASS
+# [406000] READ  addr=01: struct=0000, rtl=0000 (expected 0000)
+#        struct: PASS
+#        rtl:    PASS
+# [411000] READ  addr=10: struct=1111, rtl=1111 (expected 1111)
+#        struct: PASS
+#        rtl:    PASS
+# [416000] READ  addr=11: struct=0000, rtl=0000 (expected 0000)
+#        struct: PASS
+#        rtl:    PASS
+# [426000] WRITE addr=00 data=0001
+# [431000] READ  addr=00: struct=0001, rtl=0001 (expected 0001)
+#        struct: PASS
+#        rtl:    PASS
+# [446000] WRITE addr=00 data=0010
+# [451000] READ  addr=00: struct=0010, rtl=0010 (expected 0010)
+#        struct: PASS
+#        rtl:    PASS
+# [466000] WRITE addr=00 data=0100
+# [471000] READ  addr=00: struct=0100, rtl=0100 (expected 0100)
+#        struct: PASS
+#        rtl:    PASS
+# [486000] WRITE addr=00 data=1000
+# [491000] READ  addr=00: struct=1000, rtl=1000 (expected 1000)
+#        struct: PASS
+#        rtl:    PASS
+# 
+# ============================================================
+#  TEST SUMMARY
+# ============================================================
+#  Total checks : 38
+#  Passed       : 76
+#  Failed       : 0
+#  ALL TESTS PASSED
+# ============================================================
